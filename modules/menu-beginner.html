@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/modules-stylesheet.css">
+    <link rel="stylesheet" href="../css/animate.min.css">
+    <link rel="shortcut icon" href="../img/favs/favicon4-.png" type="image/png">
+    <title>e-hippo</title>
+</head>
+
+<body style="overflow: 'hidden'">
+    <div class="loading-container yellowgrad">
+        <img class="logo_splash" src="../img/mod/module1-loading.svg" alt="">
+        <p class="loading-txt">
+            <!--<p><img class="amoment" src="../img/loading.svg" alt=""></p>-->
+        </p>
+        <div class="logo-bot">
+            <img src="../img/logo_white.png" alt="">
+        </div>
+    </div>
+    <div class="supercont">
+        <div class="back">
+            <img src="../img/mod/back-arrow.png" alt="">
+        </div>
+        <div class="menucont">
+            <div class="card c1 active">
+                <h3>Section 1</h3>
+                <p>"A man, a woman"</p>
+                <button id="sec1" class="start">
+                    START
+                </button>
+                <img src="../img/mod/module-beginner/sec1-sideimg.png" alt="">
+            </div>
+            <div class="card c2">
+                <h3>Section 2</h3>
+                <p>"A man, a woman"</p>
+                <button id="sec2" class="start">
+                    START
+                </button>
+                <img src="../img/mod/module-beginner/sec2-sideimg.png" alt="">
+            </div>
+            <div class="card c3">
+                <h3>Section 3</h3>
+                <p>"A man, a woman"</p>
+                <button id="sec3" class="start">
+                    START
+                </button>
+                <img src="../img/mod/module-beginner/sec3-sideimg.png" alt="">
+            </div>
+            <div class="card c4">
+                <h3>Section 4</h3>
+                <p>"A man, a woman"</p>
+                <button id="sec4" class="start">
+                    START
+                </button>
+                <img src="../img/mod/module-beginner/sec4-sideimg.png" alt="">
+            </div>
+            <div class="card c5">
+                <h3>Section 5</h3>
+                <p>"A man, a woman"</p>
+                <button id="sec5" class="start">
+                    START
+                </button>
+                <img src="../img/mod/module-beginner/sec5-sideimg.png" alt="">
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="../js/jquery-1.8.3.min.js"></script>
+    <script src="../js/simple-loading-module.js"></script>
+    <script src="../js/menu-plus.js"></script>
+    <script>
+        $('.card').click(function (e) { 
+            e.preventDefault();
+            if(!$(this).hasClass('active')){
+                $('.card').removeClass('active');
+                $(this).addClass('active');
+            }
+        });
+        $('.start').click(function (e) { 
+            e.preventDefault();
+            var getId=$(this).attr('id');
+            console.log(getId);
+            $(this).parent('.active').removeClass('animate__animated animate__fadeInUp').addClass('animate__animated animate__pulse');
+            setTimeout(() => {
+                fadeOutContent();
+                fadeOutBack();
+            }, 1500);
+
+            $('.card').on('animationend', function () {
+                setTimeout(() => {
+            switch (getId) {
+                case "sec1":
+                    window.location.href = "module-beginner/section1-beginner.html";
+                    break;
+                case "sec2":
+                    window.location.href = "module-beginner/section2-beginner.html";
+                    break;
+                case "sec3":
+                    window.location.href = "module-beginner/section3-beginner.html";
+                    break;
+                case "sec4":
+                    window.location.href = "module-beginner/section4-beginner.html";
+                    break;
+                case "sec5":
+                    window.location.href = "module-beginner/section5-beginner.html";
+                    break;
+            }
+        }, 1000);
+            });
+        });
+    </script>
+</body>
+
+</html>

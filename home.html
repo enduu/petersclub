@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/click.css">
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="shortcut icon" href="img/favs/favicon5.png" type="image/png">
+    <title>Peter's Club</title>
+</head>
+<body class="main purpleb">
+    <div class="loading-container mainload purpleb">
+        <p class="loading-txt">
+            <p><img class="amoment" src="img/loading.svg" alt=""></p>
+        </p>
+    </div>
+    <header class="mainheader">
+        <div class="logocont">
+            <img class="logoim" src="img/petersworld.png" alt="">
+            <p>Peter's Club</p>
+        </div>
+        <div class="userwindow">
+            <div class="userpic" id="userPic" style="background-image: url('img/user/default.jpg')">
+            </div>
+            <div class="userinfo">
+                <p class='username'><i> User </i><span id="usernameDisplay">Guest</span></p>
+                <div class="infoline">
+                    <div class="viptype vip1">VIP 1</div>
+                    <div class="trophy"></div>
+                    <div class="logoutb" onClick='logout()'>
+                        <img src="img/logoutb.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="white-cont">
+        <h2 class="hello">Hello <span id="helloUser">Guest</span>,
+            <span class="welcome">this is where to start</span></h2>
+        <h3>Worksheets</h3>
+        <div class="swiper-container">
+            <div class="vocabcarousel swiper-wrapper">
+                <div id="level1" class="lvli swiper-slide">
+                    <h3>Sight words 🔥</h3>
+                    <p>Sight word worksheets to practice writing and word recognition.</p>
+                    <div class="unlocked downsw" data-pdf="sw" onclick="downloadPDF(event)">
+                        Download
+                    </div>
+                    <div class="completionp">
+                        <svg viewBox="0 0 36 36" class="circular-chart">
+                            <path class="circle" stroke-dasharray="100, 100" d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        </svg>
+                        <h2>41</h2>
+                        <h3>Pages</h3>
+                    </div>
+                </div>
+                <div id="level2" class="lvli swiper-slide">
+                    <h3>Reading comprehension 👍</h3>
+                    <p>Short stories to practice reading and understanding simple text</p>
+                    <div class="unlocked downrc" data-pdf="rc" onclick="downloadPDF(event)">
+                        Download
+                    </div>
+                    <div class="completionp">
+                        <svg viewBox="0 0 36 36" class="circular-chart">
+                            <path class="circle" stroke-dasharray="100, 100" d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        </svg>
+                        <h2>118</h2>
+                        <h3>Pages</h3>
+                    </div>
+                </div>
+                <div id="level3" class="lvli swiper-slide">
+                    <h3>Other 💪</h3>
+                    <p>Fun worksheets for extra practice with various skills</p>
+                    <div class="locked downow">
+                        Download
+                    </div>
+                    <div class="completionp">
+                        <svg viewBox="0 0 36 36" class="circular-chart">
+                            <path class="circle" stroke-dasharray="6, 100" d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        </svg>
+                        <h2>6</h2>
+                        <h3>Pages</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/jquery-1.8.3.min.js"></script>
+        <script src="js/main-transitions.js"></script>
+        <script>
+            function logout() {
+                localStorage.removeItem('username');
+                window.location.href = 'index.html';
+            }
+            // Set username from localStorage if available
+            function setUsername() {
+                let username = localStorage.getItem('username');
+                let sex = 'unknown';
+                if (!username) username = 'Guest';
+                // Girls: avery, abby, claire, candy, riley, eleanor, babe, amy, carina, chenchen, nancy, dora, emily
+                // Boys: frankie, chris, andy, leo, jerry, eric, jason
+                const girls = ["avery","abby","claire","candy","riley","eleanor","babe","amy","carina","chenchen","nancy","dora","emily"];
+                const boys = ["frankie","chris","andy","leo","jerry","eric","jason"];
+                let displayName = username.charAt(0).toUpperCase() + username.slice(1);
+                if (girls.includes(username.toLowerCase())) {
+                    sex = 'girl';
+                } else if (boys.includes(username.toLowerCase())) {
+                    sex = 'boy';
+                }
+                document.getElementById('usernameDisplay').textContent = displayName;
+                document.getElementById('helloUser').textContent = displayName;
+                // Set userpic
+                let userPic = document.getElementById('userPic');
+                if (sex === 'girl') {
+                    userPic.style.backgroundImage = "url('img/user/girl.jpg')";
+                } else if (sex === 'boy') {
+                    userPic.style.backgroundImage = "url('img/user/boy.jpg')";
+                } else {
+                    userPic.style.backgroundImage = "url('img/user/default.jpg')";
+                }
+            }
+            setUsername();
+        </script>
+        <script>
+            function downloadPDF(event) {
+                event.stopPropagation();
+                const fileKey = event.currentTarget.getAttribute('data-pdf');
+                let filePath = '';
+                if (fileKey === 'sw') {
+                    filePath = 'down/sightw1.pdf';
+                } else if (fileKey === 'rc') {
+                    filePath = 'down/readingc1.pdf';
+                }
+                if (filePath) {
+                    fetch(filePath)
+                    .then(res => res.blob())
+                    .then(blob => {
+                        const url = window.URL.createObjectURL(blob);
+                        const a = document.createElement('a');
+                        a.href = url;
+                        a.download = filePath.split('/').pop();
+                        document.body.appendChild(a);
+                        a.click();
+                        a.remove();
+                        window.URL.revokeObjectURL(url);
+                    });
+                }
+            }
+        </script>
+        <script>
+        $(document).ready(function(){
+            setTimeout(() => {
+                $('.amoment').addClass('animate__animated');
+                $('.amoment').addClass('animate__fadeOut');
+                $('.logo_splash').addClass('animate__animated');
+                $('.logo_splash').addClass('animate__fadeOut');
+                setTimeout(() => {
+                    $('body').css('overflow','visible');
+                    $('.loading-container').css('display','none');
+                    $('.signin').css('display','table');
+                    $('.white-cont').addClass('animate__animated');
+                    $('.white-cont').addClass('animate__fadeInUp');
+                }, 500);
+            }, 4000);
+        });
+        </script>
+        <script src="js/transitions-all.js"></script>
+        <script src="js/removeanimate.js"></script>
+        <script src="js/swiper.min.js"></script>
+        <script src="js/redirect-main.js"></script>
+        <script>
+            let loopCount = 0;
+            const swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1.2,
+            spaceBetween: 5,
+            loop: true,
+            initialSlide: 2,
+            speed: 1000,
+            effect: 'slide',
+            loopAdditionalSlides: 3,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            on: {
+                slideChangeTransitionEnd: function () {
+                loopCount++;
+                if (loopCount >= 4) {
+                    this.autoplay.stop();
+                    this.loopDestroy?.();
+                }
+                }
+            },
+            observer: true,
+            observeParents: true,
+            breakpoints: {
+                1000: {
+                slidesPerView: 2.2,
+                spaceBetween: 15,
+                autoHeight: false,
+                }
+            }
+            });
+            swiper.init();
+        </script>
+</body>
+</html>

@@ -1,0 +1,322 @@
+$darky: #FDCC0D;
+$lighty: #FFDD00;
+$purple: #590eb4;
+$orangew: #FD7D0D;
+$whitish: #fff;
+$lightwhite: #f8f8ff;
+$blackish: #0c0c0c;
+$yellowgrad: linear-gradient(0deg, rgba(253, 204, 13, 1) 0%, rgba(255, 221, 0, 1) 100%);
+$orangegrad: linear-gradient(0deg,rgba(253, 125, 13, 1) 0%, rgba(243, 120, 21, 1)100%);
+$purplegrad: linear-gradient(0deg,rgba(94, 0, 207, 1) 0%, rgba(89, 14, 180, 1)100%);
+
+$bigfont: 2.8em;
+$medfont: 2.0em;
+$smfont: 1.8em;
+$smallfont: 1.2em;
+$tsfont: 1em;
+$tinyfont: 0.8em;
+
+$padding: 0px 6%;
+$width: 88%;
+
+
+.iccont{
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.beginnere{
+    &.giraffe{
+        background-image: url('../img/vocab/beginner/animals/giraffe2.jpg');
+    }
+    &.triangle{
+        background-image: url('../img/vocab/beginner/shapes/triangle.jpg');
+    }
+    &.foggy{
+        background-image: url('../img/vocab/beginner/weather/foggy.jpg');
+    }
+    &.pink{
+        background-image: url('../img/vocab/beginner/colors/pink.jpg');
+    }
+    &.eight{
+        background-image: url('../img/vocab/beginner/numbers/8.jpg');
+    }
+    &.dolphin{
+        background-image: url('../img/vocab/beginner/animals/dolphin.jpg');
+    }
+    &.hail{
+        background-image: url('../img/vocab/beginner/weather/hail.jpg');
+    }
+    &.circle{
+        background-image: url('../img/vocab/beginner/shapes/circle.jpg');
+    }
+    &.three{
+        background-image: url('../img/vocab/beginner/numbers/3.jpg');
+    }
+    &.brown{
+        background-image: url('../img/vocab/beginner/colors/brown.jpg');
+    }
+}
+
+
+.intermediatee{
+    &.mom{
+        background-image: url('../img/vocab/intermediate/family/mom.jpg');
+    }
+    &.basketball{
+        background-image: url('../img/vocab/intermediate/hobbies/basketball.jpg');
+    }
+    &.passport{
+        background-image: url('../img/vocab/intermediate/travel/passport.jpg');
+    }
+    &.steak{
+        background-image: url('../img/vocab/intermediate/food/steak.jpg');
+    }
+    &.camera{
+        background-image: url('../img/vocab/intermediate/travel/camera.jpg');
+    }
+    &.tabletennis{
+        background-image: url('../img/vocab/intermediate/hobbies/tabletennis.jpg');
+    }
+    &.grandma{
+        background-image: url('../img/vocab/intermediate/family/grandma.jpg');
+    }
+    &.bus{
+        background-image: url('../img/vocab/intermediate/transportation/bus.jpg');
+    }
+    &.salad{
+        background-image: url('../img/vocab/intermediate/food/salad.jpg');
+    }
+    &.motorcycle{
+        background-image: url('../img/vocab/intermediate/transportation/motorcycle.jpg');
+    }
+}
+
+.advancede{
+    &.meeting{
+        background-image: url('../img/vocab/advanced/work/meeting.jpg');
+    }
+    &.welfare{
+        background-image: url('../img/vocab/advanced/social/welfare.jpg');
+    }
+    &.sick{
+        background-image: url('../img/vocab/advanced/health/sick.jpg');
+    }
+    &.pill{
+        background-image: url('../img/vocab/advanced/health/pill.jpg');
+    }
+    &.laptop{
+        background-image: url('../img/vocab/advanced/technology/laptop.jpg');
+    }
+    &.drone{
+        background-image: url('../img/vocab/advanced/technology/drone.jpg');
+    }
+    &.cashmachine{
+        background-image: url('../img/vocab/advanced/economy/cashmachine.jpg');
+    }
+    &.boss{
+        background-image: url('../img/vocab/advanced/work/boss.jpg');
+    }
+    &.creditcard{
+        background-image: url('../img/vocab/advanced/economy/creditcard.jpg');
+    }
+    &.celebrity{
+        background-image: url('../img/vocab/advanced/social/celebrity.jpg');
+    }
+}
+
+.circlehelp{
+    width: 50px;
+    height: 50px;
+    background: url('../img/help_ico_black.png') no-repeat center;
+    background-position-y: 4px;
+    position: absolute;
+    right: 10px;
+    bottom: -25px;
+    border-radius: 100%;
+    background-color: $darky;
+}
+
+.optbtncont{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    align-items: center;
+}
+
+.optionbtn{
+    font-family: 'open-regular';
+    font-size: 0.8em;
+    border: 1px solid #707070;
+    width: 26%;
+    padding: 0 1%;
+    height: 40px;
+    border-radius: 2px;
+    text-align: center;
+    line-height: 40px;
+    transition: all 1s ease-in-out;
+    &.correcta{
+        border: 1.2px solid $purple;
+        height: 42px;
+        width: 32%;
+        position: relative;
+        color: $purple;
+        font-size: $tsfont;
+        &:after{
+            content: '';
+            background: url('../img/right.png') no-repeat center;
+            position: relative;
+            width: 20px;
+            height: 20px;
+            border-radius: 100%;
+            background-color: $purple;
+            margin: -50px auto;
+            display: block;
+        }
+    }
+    &.wronga{
+        animation: wrong 1s ease-in-out;
+    }
+}
+
+
+h3.helptxt {
+    text-align: center;
+    font-family: open-regular;
+    line-height: 30px;
+    color: $purple;
+}
+
+@keyframes wrong{
+    0%{border-color: $blackish}
+    50%{border-color: $orangew; color: $orangew; font-weight: bold;}
+    100%{border-color: $blackish;}
+}
+
+.correctb{
+    display: none;
+}
+
+.headexe:before{
+    content: 'Memory+';
+}
+
+
+.type{
+    font-family: open-semi;
+    //beginner
+    &[data-type='animal'] {
+        &::before{
+        content: 'animal';
+        }
+    }
+    &[data-type='shape'] {
+        &::before{
+        content: 'shape';
+        }
+    }
+    &[data-type='color'] {
+        &::before{
+        content: 'color';
+        }
+    }
+    &[data-type='number'] {
+        &::before{
+        content: 'number';
+        }
+    }
+    &[data-type='weather'] {
+        &::before{
+        content: 'weather';
+        }
+    }
+    //intermediate
+    &[data-type='food'] {
+        &::before{
+        content: 'food';
+        }
+    }
+    &[data-type='travel'] {
+        &::before{
+        content: 'travel asset';
+        }
+    }
+    &[data-type='hobbies'] {
+        &::before{
+        content: 'hobbie';
+        }
+    }
+    &[data-type='transportation'] {
+        &::before{
+        content: 'transportation';
+        }
+    }
+    &[data-type='family'] {
+        &::before{
+        content: 'family member';
+        }
+    }
+    //advanced
+    &[data-type='economy'] {
+        &::before{
+        content: 'asset';
+        }
+    }
+    &[data-type='technology'] {
+        &::before{
+        content: 'technology';
+        }
+    }
+    &[data-type='technologya'] {
+        &::before{
+        content: 'asset';
+        }
+    }
+    &[data-type='work'] {
+        &::before{
+        content: 'work asset';
+        }
+    }
+    &[data-type='worka'] {
+        &::before{
+        content: 'work activity';
+        }
+    }
+    &[data-type='workp'] {
+        &::before{
+        content: 'work position';
+        }
+    }
+    &[data-type='health'] {
+        &::before{
+        content: '';
+        }
+    }
+    &[data-type='healthb'] {
+        &::before{
+        content: 'healthy behaviour';
+        }
+    }
+    &[data-type='healthc'] {
+        &::before{
+        content: 'health condition';
+        }
+    }
+    &[data-type='socials'] {
+        &::before{
+        content: 'social status';
+        }
+    }
+    &[data-type='socialb'] {
+        &::before{
+        content: 'social behaviour';
+        }
+    }
+    &[data-type='sociala'] {
+        &::before{
+        content: 'social activity';
+        }
+    }
+}

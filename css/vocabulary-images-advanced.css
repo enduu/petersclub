@@ -1,0 +1,154 @@
+.economy #c1 {
+  background-image: url("../img/vocab/advanced/economy/cash.jpg");
+}
+.economy #c2 {
+  background-image: url("../img/vocab/advanced/economy/creditcard.jpg");
+}
+.economy #c3 {
+  background-image: url("../img/vocab/advanced/economy/bank.jpg");
+}
+.economy #c4 {
+  background-image: url("../img/vocab/advanced/economy/cashmachine.jpg");
+}
+.economy #c5 {
+  background-image: url("../img/vocab/advanced/economy/save.jpg");
+}
+.economy #c6 {
+  background-image: url("../img/vocab/advanced/economy/ripoff.jpg");
+}
+.economy #c7 {
+  background-image: url("../img/vocab/advanced/economy/pay.jpg");
+}
+.economy #c8 {
+  background-image: url("../img/vocab/advanced/economy/rich.jpg");
+}
+.economy #c9 {
+  background-image: url("../img/vocab/advanced/economy/poor.jpg");
+}
+.economy #c10 {
+  background-image: url("../img/vocab/advanced/economy/price.jpg");
+}
+
+.technology #c1 {
+  background-image: url("../img/vocab/advanced/technology/computer.jpg");
+}
+.technology #c2 {
+  background-image: url("../img/vocab/advanced/technology/smartphone.jpg");
+}
+.technology #c3 {
+  background-image: url("../img/vocab/advanced/technology/tablet.jpg");
+}
+.technology #c4 {
+  background-image: url("../img/vocab/advanced/technology/keyboard.jpg");
+}
+.technology #c5 {
+  background-image: url("../img/vocab/advanced/technology/monitor.jpg");
+}
+.technology #c6 {
+  background-image: url("../img/vocab/advanced/technology/tower.jpg");
+}
+.technology #c7 {
+  background-image: url("../img/vocab/advanced/technology/laptop.jpg");
+}
+.technology #c8 {
+  background-image: url("../img/vocab/advanced/technology/speaker.jpg");
+}
+.technology #c9 {
+  background-image: url("../img/vocab/advanced/technology/drone.jpg");
+}
+.technology #c10 {
+  background-image: url("../img/vocab/advanced/technology/simcard.jpg");
+}
+
+.work #c1 {
+  background-image: url("../img/vocab/advanced/work/hire.jpg");
+}
+.work #c2 {
+  background-image: url("../img/vocab/advanced/work/quit.jpg");
+}
+.work #c3 {
+  background-image: url("../img/vocab/advanced/work/salary.jpg");
+}
+.work #c4 {
+  background-image: url("../img/vocab/advanced/work/resume.jpg");
+}
+.work #c5 {
+  background-image: url("../img/vocab/advanced/work/interview.jpg");
+}
+.work #c6 {
+  background-image: url("../img/vocab/advanced/work/boss.jpg");
+}
+.work #c7 {
+  background-image: url("../img/vocab/advanced/work/agenda.jpg");
+}
+.work #c8 {
+  background-image: url("../img/vocab/advanced/work/plan.jpg");
+}
+.work #c9 {
+  background-image: url("../img/vocab/advanced/work/brainstorm.jpg");
+}
+.work #c10 {
+  background-image: url("../img/vocab/advanced/work/meeting.jpg");
+}
+
+.health #c1 {
+  background-image: url("../img/vocab/advanced/health/healthy.jpg");
+}
+.health #c2 {
+  background-image: url("../img/vocab/advanced/health/sick.jpg");
+}
+.health #c3 {
+  background-image: url("../img/vocab/advanced/health/doctor.jpg");
+}
+.health #c4 {
+  background-image: url("../img/vocab/advanced/health/exercise.jpg");
+}
+.health #c5 {
+  background-image: url("../img/vocab/advanced/health/medicine.jpg");
+}
+.health #c6 {
+  background-image: url("../img/vocab/advanced/health/ointment.jpg");
+}
+.health #c7 {
+  background-image: url("../img/vocab/advanced/health/pill.jpg");
+}
+.health #c8 {
+  background-image: url("../img/vocab/advanced/health/pain.jpg");
+}
+.health #c9 {
+  background-image: url("../img/vocab/advanced/health/stomachache.jpg");
+}
+.health #c10 {
+  background-image: url("../img/vocab/advanced/health/sunburn.jpg");
+}
+
+.social #c1 {
+  background-image: url("../img/vocab/advanced/social/popular.jpg");
+}
+.social #c2 {
+  background-image: url("../img/vocab/advanced/social/welfare.jpg");
+}
+.social #c3 {
+  background-image: url("../img/vocab/advanced/social/celebrity.jpg");
+}
+.social #c4 {
+  background-image: url("../img/vocab/advanced/social/poverty.jpg");
+}
+.social #c5 {
+  background-image: url("../img/vocab/advanced/social/racism.jpg");
+}
+.social #c6 {
+  background-image: url("../img/vocab/advanced/social/eyecontact.jpg");
+}
+.social #c7 {
+  background-image: url("../img/vocab/advanced/social/handshake.jpg");
+}
+.social #c8 {
+  background-image: url("../img/vocab/advanced/social/chat.jpg");
+}
+.social #c9 {
+  background-image: url("../img/vocab/advanced/social/call.jpg");
+}
+.social #c10 {
+  background-image: url("../img/vocab/advanced/social/text.jpg");
+}/*# sourceMappingURL=vocabulary-images-advanced.css.map */

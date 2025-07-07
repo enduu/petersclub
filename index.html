@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/click.css">
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="shortcut icon" href="img/favs/favicon5.png" type="image/png">
+    <title>Peter's Club</title>
+</head>
+<body class="purpleb2">
+    <div class="loading-container">
+        <div class="loader"></div>
+    </div>
+    <div class="signin full-white-cont full-white-cont-nb">
+        <div class="conttext">
+            <img src="img/petersworld.png" alt="" class="topillus">
+            <p class='pres'><span class='fl'>Welcome to</span>Peter's Club</p>
+        </div>
+        <div class="contform">
+            <form class="sform" id="loginForm" autocomplete="off">
+                <label for="username">Username:</label>
+                <div class="input-wrapper">
+                    <select name="username" id="username" class="styled-input" required>
+                        <option value="">Select your name</option>
+                    </select>
+                </div>
+                <label for="password">Password:</label>
+                <div class="input-wrapper">
+                    <input name="password" id="password" type="password" class="styled-input" required />
+                </div>
+                <button id="submit" class="button main" type="submit">Login</button>
+                <div class="login-error" id="loginError"></div>
+            </form>
+        </div>
+    </div>
+    <style>
+        .input-wrapper {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        .styled-input {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #bdbdbd;
+            border-radius: 6px;
+            font-size: 1.1em;
+            background: #fafaff;
+            color: #333;
+            box-sizing: border-box;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            outline: none;
+            transition: border 0.2s;
+        }
+        .styled-input:focus {
+            border: 1.5px solid #a084e8;
+            background: #f3f0ff;
+        }
+        select.styled-input {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background: #fafaff url('data:image/svg+xml;utf8,<svg fill="%23999" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 12px center/18px 18px;
+            cursor: pointer;
+        }
+    </style>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/loading.js"></script>
+    <script>
+        const allowedUsers = [
+            "avery", "abby", "claire", "candy", "riley", "eleanor", "babe", "amy", "carina", "chenchen", "nancy", "dora", "emily", "frankie", "chris", "andy", "leo", "jerry", "eric", "jason"
+        ];
+        // Sort alphabetically and capitalize first letter
+        const sortedUsers = allowedUsers.slice().sort((a, b) => a.localeCompare(b));
+        const usernameSelect = document.getElementById('username');
+        sortedUsers.forEach(name => {
+            const option = document.createElement('option');
+            option.value = name;
+            option.textContent = name.charAt(0).toUpperCase() + name.slice(1);
+            usernameSelect.appendChild(option);
+        });
+
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const username = document.getElementById('username').value.trim().toLowerCase();
+            const password = document.getElementById('password').value;
+            const errorDiv = document.getElementById('loginError');
+            if (!allowedUsers.includes(username)) {
+                errorDiv.textContent = "Invalid username.";
+                return;
+            }
+            if (password !== "K22") {
+                errorDiv.textContent = "Incorrect password.";
+                return;
+            }
+            errorDiv.textContent = "";
+            // Save username to localStorage for use on home.html
+            localStorage.setItem('username', username);
+            // Redirect to home.html
+            window.location.href = "home.html";
+        });
+    </script>
+</body>
+</html>

@@ -10,7 +10,7 @@ $(document).ready(function(){
                 $(this).addClass('animate__animated');
                 $(this).addClass('animate__fadeOut');
                 setTimeout(() => {    
-                    window.location.href = "./home.php";
+                    window.location.href = "./home.html";
                 }, 2100);
         });
     });

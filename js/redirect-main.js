@@ -6,18 +6,18 @@
             var orange = '#FD7D0D';
             var purple = '#5E00CF';
             if(level==='level1'){
-                window.location.href = 'sightwords.php';
+                window.location.href = 'sightwords.html';
             }
             if(level==='level2'){
                 nextPage(orange);
                 setTimeout(() => {
-                window.location.href = 'readingcomprehension.php';
+                window.location.href = 'readingcomprehension.html';
                 }, 2000);
             }
             if(level==='level3'){
                 nextPage(purple);
                 setTimeout(() => {
-                window.location.href = 'other.php';
+                window.location.href = 'other.html';
                 }, 2000);
             }
         });
@@ -30,19 +30,19 @@
             if(target==='memoryplus'){
                 nextPage(yellow);
                 setTimeout(() => {
-                window.location.href = 'sightwords.php';
+                window.location.href = 'sightwords.html';
                 }, 2000);
             }
             if(target==='listeningplus'){
                 nextPage(orange);
                 setTimeout(() => {
-                window.location.href = 'readingcomprehension.php';
+                window.location.href = 'readingcomprehension.html';
                 }, 2000);
             }
             if(target==='writingplus'){
                 nextPage(purple);
                 setTimeout(() => {
-                window.location.href = 'other.php';
+                window.location.href = 'other.html';
                 }, 2000);
             }
         });
@@ -55,19 +55,19 @@
             if(module==='module1'){
                 nextPage(yellow);
                 setTimeout(() => {
-                window.location.href = 'sightwords.php';
+                window.location.href = 'sightwords.html';
                 }, 2000);
             }
             if(module==='module2'){
                 nextPage(orange);
                 setTimeout(() => {
-                window.location.href = 'readingcomprehension.php';
+                window.location.href = 'readingcomprehension.html';
                 }, 2000);
             }
             if(module==='module3'){
                 nextPage(purple);
                 setTimeout(() => {
-                window.location.href = 'other.php';
+                window.location.href = 'other.html';
                 }, 2000);
             }
         });

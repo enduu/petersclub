@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/vocab_style.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="shortcut icon" href="img/favs/favicon5.png" type="image/png">
+    <title>Peter's Club</title>
+</head>
+<body class="purpleb2">
+    <div class="loading-container mainload purplegb">
+        <p class="loading-txt">
+            <p><img class="amoment" src="img/loading.svg" alt=""></p>
+        </p>
+    </div>
+    <header class="vocabhead">
+        <div class="logocont">
+            <img class="logoim" src="img/petersworld.png" alt="">
+            <p>Peter's Club</p>
+        </div>
+    </header>
+    <div class="swiper-container advanced">
+        <div class="swiper-wrapper economy">
+            <!-- Slides will go here. Replace with static HTML or JS if needed. -->
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/redir.js"></script>
+    <script>
+        var slideCount = 118;
+        var wrapper = document.querySelector('.swiper-wrapper');
+        for (let i = 1; i <= slideCount; i++) {
+            let slide = document.createElement('div');
+            slide.id = 'c' + i;
+            slide.className = 'swiper-slide';
+            slide.style.backgroundImage = `url('img/rc/rc (${i}).jpg')`;
+            slide.innerHTML = `<div class='gomenu'></div><div class='assisttext'><div class='budge'>Worksheets</div><div class='line'><h2>Sight words</h2> <span class='pron'>Page: ${i}/ ${slideCount}</span><div class='plays' id='download${i}'><img class='play___holder' src='img/download.svg' alt=''><object class='playing' type='image/svg+xml' data='img/download.svg'></object></div></div><button class='nextbutton nextel'></button></div>`;
+            wrapper.appendChild(slide);
+        }
+        var swiper = new Swiper('.swiper-container', {
+            init: false,
+            navigation: {
+                nextEl: '.nextel',
+            },
+        });
+        swiper.on('init', function () {
+            setTimeout(() => {
+                document.querySelector('header').classList.add('animate__animated', 'animate__fadeInDown');
+                document.querySelectorAll('.assisttext').forEach(e => e.classList.add('animate__animated', 'animate__fadeInUp'));
+                document.querySelectorAll('.gomenu').forEach(e => e.classList.add('animate__animated', 'animate__fadeIn'));
+            }, 5500);
+        });
+        swiper.init();
+        swiper.on('touchStart', function () {
+            document.querySelector('header').classList.remove('animate__animated', 'animate__fadeInDown');
+            document.querySelectorAll('.assisttext').forEach(e => e.classList.remove('animate__animated', 'animate__fadeInUp'));
+            document.querySelectorAll('.gomenu').forEach(e => e.classList.remove('animate__animated', 'animate__fadeIn'));
+        });
+        swiper.on('slideChange', function () {
+            document.querySelector('header').classList.add('animate__animated', 'animate__fadeInDown');
+            document.querySelectorAll('.assisttext').forEach(e => e.classList.add('animate__animated', 'animate__fadeInUp'));
+            document.querySelectorAll('.gomenu').forEach(e => e.classList.add('animate__animated', 'animate__fadeIn'));
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+            for (let i = 1; i <= slideCount; i++) {
+                let btn = document.getElementById('download' + i);
+                if (btn) {
+                    btn.addEventListener('click', function () {
+                        const imageUrl = `img/rc/rc (${i}).jpg`;
+                        const fileName = `${i}.jpg`;
+                        const link = document.createElement('a');
+                        link.href = imageUrl;
+                        link.download = fileName;
+                        document.body.appendChild(link);
+                        link.click();
+                        document.body.removeChild(link);
+                    });
+                }
+            }
+        });
+    </script>
+    <script src="js/removeanimate.js"></script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+.animals #c1 {
+  background-image: url("../img/vocab/beginner/animals/dog.jpg");
+}
+.animals #c2 {
+  background-image: url("../img/vocab/beginner/animals/cat.jpg");
+}
+.animals #c3 {
+  background-image: url("../img/vocab/beginner/animals/monkey.jpg");
+}
+.animals #c4 {
+  background-image: url("../img/vocab/beginner/animals/giraffe.jpg");
+}
+.animals #c5 {
+  background-image: url("../img/vocab/beginner/animals/hippopotamus.jpg");
+}
+.animals #c6 {
+  background-image: url("../img/vocab/beginner/animals/mouse.jpg");
+}
+.animals #c7 {
+  background-image: url("../img/vocab/beginner/animals/dolphin.jpg");
+}
+.animals #c8 {
+  background-image: url("../img/vocab/beginner/animals/crab.jpg");
+}
+.animals #c9 {
+  background-image: url("../img/vocab/beginner/animals/cow.jpg");
+}
+.animals #c10 {
+  background-image: url("../img/vocab/beginner/animals/chicken.jpg");
+}
+
+.colors #c1 {
+  background-image: url("../img/vocab/beginner/colors/red.jpg");
+}
+.colors #c2 {
+  background-image: url("../img/vocab/beginner/colors/green.jpg");
+}
+.colors #c3 {
+  background-image: url("../img/vocab/beginner/colors/blue.jpg");
+}
+.colors #c4 {
+  background-image: url("../img/vocab/beginner/colors/yellow.jpg");
+}
+.colors #c5 {
+  background-image: url("../img/vocab/beginner/colors/pink.jpg");
+}
+.colors #c6 {
+  background-image: url("../img/vocab/beginner/colors/orange.jpg");
+}
+.colors #c7 {
+  background-image: url("../img/vocab/beginner/colors/white.jpg");
+}
+.colors #c8 {
+  background-image: url("../img/vocab/beginner/colors/black.jpg");
+}
+.colors #c9 {
+  background-image: url("../img/vocab/beginner/colors/purple.jpg");
+}
+.colors #c10 {
+  background-image: url("../img/vocab/beginner/colors/brown.jpg");
+}
+
+.numbers #c1 {
+  background-image: url("../img/vocab/beginner/numbers/1.jpg");
+}
+.numbers #c2 {
+  background-image: url("../img/vocab/beginner/numbers/2.jpg");
+}
+.numbers #c3 {
+  background-image: url("../img/vocab/beginner/numbers/3.jpg");
+}
+.numbers #c4 {
+  background-image: url("../img/vocab/beginner/numbers/4.jpg");
+}
+.numbers #c5 {
+  background-image: url("../img/vocab/beginner/numbers/5.jpg");
+}
+.numbers #c6 {
+  background-image: url("../img/vocab/beginner/numbers/6.jpg");
+}
+.numbers #c7 {
+  background-image: url("../img/vocab/beginner/numbers/7.jpg");
+}
+.numbers #c8 {
+  background-image: url("../img/vocab/beginner/numbers/8.jpg");
+}
+.numbers #c9 {
+  background-image: url("../img/vocab/beginner/numbers/9.jpg");
+}
+.numbers #c10 {
+  background-image: url("../img/vocab/beginner/numbers/10.jpg");
+}
+
+.shapes #c1 {
+  background-image: url("../img/vocab/beginner/shapes/square.jpg");
+}
+.shapes #c2 {
+  background-image: url("../img/vocab/beginner/shapes/triangle.jpg");
+}
+.shapes #c3 {
+  background-image: url("../img/vocab/beginner/shapes/rectangle.jpg");
+}
+.shapes #c4 {
+  background-image: url("../img/vocab/beginner/shapes/circle.jpg");
+}
+.shapes #c5 {
+  background-image: url("../img/vocab/beginner/shapes/star.jpg");
+}
+.shapes #c6 {
+  background-image: url("../img/vocab/beginner/shapes/oval.jpg");
+}
+.shapes #c7 {
+  background-image: url("../img/vocab/beginner/shapes/cross.jpg");
+}
+.shapes #c8 {
+  background-image: url("../img/vocab/beginner/shapes/pentagon.jpg");
+}
+.shapes #c9 {
+  background-image: url("../img/vocab/beginner/shapes/kite2.jpg");
+}
+.shapes #c10 {
+  background-image: url("../img/vocab/beginner/shapes/heart.jpg");
+}
+
+.weather #c1 {
+  background-image: url("../img/vocab/beginner/weather/sunny.jpg");
+}
+.weather #c2 {
+  background-image: url("../img/vocab/beginner/weather/rainy.jpg");
+}
+.weather #c3 {
+  background-image: url("../img/vocab/beginner/weather/snowy.jpg");
+}
+.weather #c4 {
+  background-image: url("../img/vocab/beginner/weather/windy.jpg");
+}
+.weather #c5 {
+  background-image: url("../img/vocab/beginner/weather/cloudy.jpg");
+}
+.weather #c6 {
+  background-image: url("../img/vocab/beginner/weather/foggy.jpg");
+}
+.weather #c7 {
+  background-image: url("../img/vocab/beginner/weather/stormy.jpg");
+}
+.weather #c8 {
+  background-image: url("../img/vocab/beginner/weather/partly.jpg");
+}
+.weather #c9 {
+  background-image: url("../img/vocab/beginner/weather/sleet.jpg");
+}
+.weather #c10 {
+  background-image: url("../img/vocab/beginner/weather/hail.jpg");
+}/*# sourceMappingURL=vocabulary-images-beginner.css.map */

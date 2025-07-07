@@ -1,0 +1,251 @@
+.iccont {
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.beginnere.giraffe {
+  background-image: url("../img/vocab/beginner/animals/giraffe2.jpg");
+}
+.beginnere.triangle {
+  background-image: url("../img/vocab/beginner/shapes/triangle.jpg");
+}
+.beginnere.foggy {
+  background-image: url("../img/vocab/beginner/weather/foggy.jpg");
+}
+.beginnere.pink {
+  background-image: url("../img/vocab/beginner/colors/pink.jpg");
+}
+.beginnere.eight {
+  background-image: url("../img/vocab/beginner/numbers/8.jpg");
+}
+.beginnere.dolphin {
+  background-image: url("../img/vocab/beginner/animals/dolphin.jpg");
+}
+.beginnere.hail {
+  background-image: url("../img/vocab/beginner/weather/hail.jpg");
+}
+.beginnere.circle {
+  background-image: url("../img/vocab/beginner/shapes/circle.jpg");
+}
+.beginnere.three {
+  background-image: url("../img/vocab/beginner/numbers/3.jpg");
+}
+.beginnere.brown {
+  background-image: url("../img/vocab/beginner/colors/brown.jpg");
+}
+
+.intermediatee.mom {
+  background-image: url("../img/vocab/intermediate/family/mom.jpg");
+}
+.intermediatee.basketball {
+  background-image: url("../img/vocab/intermediate/hobbies/basketball.jpg");
+}
+.intermediatee.passport {
+  background-image: url("../img/vocab/intermediate/travel/passport.jpg");
+}
+.intermediatee.steak {
+  background-image: url("../img/vocab/intermediate/food/steak.jpg");
+}
+.intermediatee.camera {
+  background-image: url("../img/vocab/intermediate/travel/camera.jpg");
+}
+.intermediatee.tabletennis {
+  background-image: url("../img/vocab/intermediate/hobbies/tabletennis.jpg");
+}
+.intermediatee.grandma {
+  background-image: url("../img/vocab/intermediate/family/grandma.jpg");
+}
+.intermediatee.bus {
+  background-image: url("../img/vocab/intermediate/transportation/bus.jpg");
+}
+.intermediatee.salad {
+  background-image: url("../img/vocab/intermediate/food/salad.jpg");
+}
+.intermediatee.motorcycle {
+  background-image: url("../img/vocab/intermediate/transportation/motorcycle.jpg");
+}
+
+.advancede.meeting {
+  background-image: url("../img/vocab/advanced/work/meeting.jpg");
+}
+.advancede.welfare {
+  background-image: url("../img/vocab/advanced/social/welfare.jpg");
+}
+.advancede.sick {
+  background-image: url("../img/vocab/advanced/health/sick.jpg");
+}
+.advancede.pill {
+  background-image: url("../img/vocab/advanced/health/pill.jpg");
+}
+.advancede.laptop {
+  background-image: url("../img/vocab/advanced/technology/laptop.jpg");
+}
+.advancede.drone {
+  background-image: url("../img/vocab/advanced/technology/drone.jpg");
+}
+.advancede.cashmachine {
+  background-image: url("../img/vocab/advanced/economy/cashmachine.jpg");
+}
+.advancede.boss {
+  background-image: url("../img/vocab/advanced/work/boss.jpg");
+}
+.advancede.creditcard {
+  background-image: url("../img/vocab/advanced/economy/creditcard.jpg");
+}
+.advancede.celebrity {
+  background-image: url("../img/vocab/advanced/social/celebrity.jpg");
+}
+
+.circlehelp {
+  width: 50px;
+  height: 50px;
+  background: url("../img/help_ico_black.png") no-repeat center;
+  background-position-y: 4px;
+  position: absolute;
+  right: 10px;
+  bottom: -25px;
+  border-radius: 100%;
+  background-color: #FDCC0D;
+}
+
+.optbtncont {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  align-items: center;
+}
+
+.optionbtn {
+  font-family: "open-regular";
+  font-size: 0.8em;
+  border: 1px solid #707070;
+  width: 26%;
+  padding: 0 1%;
+  height: 40px;
+  border-radius: 2px;
+  text-align: center;
+  line-height: 40px;
+  transition: all 1s ease-in-out;
+}
+.optionbtn.correcta {
+  border: 1.2px solid #590eb4;
+  height: 42px;
+  width: 32%;
+  position: relative;
+  color: #590eb4;
+  font-size: 1em;
+}
+.optionbtn.correcta:after {
+  content: "";
+  background: url("../img/right.png") no-repeat center;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background-color: #590eb4;
+  margin: -50px auto;
+  display: block;
+}
+.optionbtn.wronga {
+  animation: wrong 1s ease-in-out;
+}
+
+h3.helptxt {
+  text-align: center;
+  font-family: open-regular;
+  line-height: 30px;
+  color: #590eb4;
+}
+
+@keyframes wrong {
+  0% {
+    border-color: #0c0c0c;
+  }
+  50% {
+    border-color: #FD7D0D;
+    color: #FD7D0D;
+    font-weight: bold;
+  }
+  100% {
+    border-color: #0c0c0c;
+  }
+}
+.correctb {
+  display: none;
+}
+
+.headexe:before {
+  content: "Memory+";
+}
+
+.type {
+  font-family: open-semi;
+}
+.type[data-type=animal]::before {
+  content: "animal";
+}
+.type[data-type=shape]::before {
+  content: "shape";
+}
+.type[data-type=color]::before {
+  content: "color";
+}
+.type[data-type=number]::before {
+  content: "number";
+}
+.type[data-type=weather]::before {
+  content: "weather";
+}
+.type[data-type=food]::before {
+  content: "food";
+}
+.type[data-type=travel]::before {
+  content: "travel asset";
+}
+.type[data-type=hobbies]::before {
+  content: "hobbie";
+}
+.type[data-type=transportation]::before {
+  content: "transportation";
+}
+.type[data-type=family]::before {
+  content: "family member";
+}
+.type[data-type=economy]::before {
+  content: "asset";
+}
+.type[data-type=technology]::before {
+  content: "technology";
+}
+.type[data-type=technologya]::before {
+  content: "asset";
+}
+.type[data-type=work]::before {
+  content: "work asset";
+}
+.type[data-type=worka]::before {
+  content: "work activity";
+}
+.type[data-type=workp]::before {
+  content: "work position";
+}
+.type[data-type=health]::before {
+  content: "";
+}
+.type[data-type=healthb]::before {
+  content: "healthy behaviour";
+}
+.type[data-type=healthc]::before {
+  content: "health condition";
+}
+.type[data-type=socials]::before {
+  content: "social status";
+}
+.type[data-type=socialb]::before {
+  content: "social behaviour";
+}
+.type[data-type=sociala]::before {
+  content: "social activity";
+}/*# sourceMappingURL=memorysheet.css.map */
