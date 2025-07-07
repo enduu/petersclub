@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/vocab_style.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="shortcut icon" href="img/favs/favicon4-.png" type="image/png">
+    <title>e-hippo</title>
+</head>
+
+<body class="purplegb">
+    <div class="loading-container mainload purplegb">
+        <p class="loading-txt">
+            <p><img class="amoment" src="img/loading.svg" alt=""></p>
+        </p>
+    </div>
+
+    <header class="vocabhead">
+        <div class="logocont">
+            <img class="logoim" src="img/petersworld.png" alt="">
+            <p>Peter's Club</p>
+        </div>
+    </header>
+
+    <div class="swiper-container advanced">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper economy">
+            <!-- Slides -->
+            <div id="c1" class="swiper-slide">
+                <div class="gomenu"></div>
+                <div class="assisttext">
+                    <div class="budge">Worksheets</div>
+                    <div class="line">
+                        <h2>Cash</h2> <span class="pron">/kæʃ/</span>
+                        <div class="plays" id="plays1"><img class="play___holder" src="img/svg-speaker-white.svg" alt="">
+                        <object class="playing" type="image/svg+xml" data="img/svg-speaker-white-play.svg"></object>
+                        </div>
+                    </div>
+                    <button class="nextbutton nextel"></button>
+                </div>
+            </div>
+            <div id="c2" class="swiper-slide">
+                <div class="gomenu"></div>
+                <div class="assisttext">
+                    <div class="budge"></div>
+                    <div class="line">
+                        <h2>Credit card</h2> <span class="pron">/ˈkred.ɪt ˌkɑːrd/</span>
+                        <div class="plays" id="plays2"><img class="play___holder" src="img/svg-speaker-white.svg" alt="">
+                            <object class="playing" type="image/svg+xml" data="img/svg-speaker-white-play.svg"></object>
+                        </div>
+                    </div>
+                    <button class="nextbutton nextel"></button>
+                </div>
+            </div>
+            <div id="c3" class="swiper-slide">
+                <div class="gomenu"></div>
+                <div class="assisttext">
+                    <div class="budge"></div>
+                    <div class="line">
+                        <h2>Bank</h2> <span class="pron">/bæŋk/</span>
+                        <div class="plays" id="plays3"><img class="play___holder" src="img/svg-speaker-white.svg" alt="">
+                            <object class="playing" type="image/svg+xml" data="img/svg-speaker-white-play.svg"></object>
+                        </div>
+                    </div>
+                    <button class="nextbutton nextel"></button>
+                </div>
+            </div>
+            <div id="c4" class="swiper-slide">
+                <div class="gomenu"></div>
+                <div class="assisttext">
+                    <div class="budge"></div>
+                    <div class="line">
+                        <h2>Cash machine</h2> <span class="pron">/ˈkæʃ məˌʃiːn/</span>
+                        <div class="plays" id="plays4"><img class="play___holder" src="img/svg-speaker-white.svg" alt="">
+                            <object class="playing" type="image/svg+xml" data="img/svg-speaker-white-play.svg"></object>
+                        </div>
+                    </div>
+                    <button class="nextbutton nextel"></button>
+                </div>
+            </div>
+            <div id="c5" class="swiper-slide">
+                <div class="gomenu"></div>
+                <div class="assisttext">
+                    <div class="budge"></div>
+                    <div class="line">
+                        <h2>Save (money)</h2> <span class="pron">/seɪv/</span>
+                        <div class="plays" id="plays5"><img class="play___holder" src="img/svg-speaker-white.svg" alt="">
+                            <object class="playing" type="image/svg+xml" data="img/svg-speaker-white-play.svg"></object>
+                        </div>
+                    </div>
+                    <button class="nextbutton nextel"></button>
+                </div>
+            </div>
+            <div id="c6" class="swiper-slide">
+                <div class="gomenu"></div>
+                <div class="assisttext">
+                    <div class="budge"></div>
+                    <div class="line">
+                        <h2>Rip-off</h2> <span class="pron">/ˈrɪp.ɑːf/</span>
+                        <div class="plays" id="plays6"><img class="play___holder" src="img/svg-speaker-white.svg" alt="">
+                            <object class="playing" type="image/svg+xml" data="img/svg-speaker-white-play.svg"></object>
+                        </div>
+                    </div>
+                    <button class="nextbutton nextel"></button>
+                </div>
+            </div>
+            <div id="c7" class="swiper-slide">
+                <div class="gomenu"></div>
+                <div class="assisttext">
+                    <div class="budge"></div>
+                    <div class="line">
+                        <h2>Pay</h2> <span class="pron">/peɪ/</span>
+                        <div class="plays" id="plays7"><img class="play___holder" src="img/svg-speaker-white.svg" alt="">
+                            <object class="playing" type="image/svg+xml" data="img/svg-speaker-white-play.svg"></object>
+                        </div>
+                    </div>
+                    <button class="nextbutton nextel"></button>
+                </div>
+            </div>
+            <div id="c8" class="swiper-slide">
+                <div class="gomenu"></div>
+                <div class="assisttext">
+                    <div class="budge"></div>
+                    <div class="line">
+                        <h2>Rich</h2> <span class="pron">/rɪtʃ/</span>
+                        <div class="plays" id="plays8"><img class="play___holder" src="img/svg-speaker-white.svg" alt="">
+                            <object class="playing" type="image/svg+xml" data="img/svg-speaker-white-play.svg"></object>
+                        </div>
+                    </div>
+                    <button class="nextbutton nextel"></button>
+                </div>
+            </div>
+            <div id="c9" class="swiper-slide">
+                <div class="gomenu"></div>
+                <div class="assisttext">
+                    <div class="budge"></div>
+                    <div class="line">
+                        <h2>Poor</h2> <span class="pron">/pʊr/</span>
+                        <div class="plays" id="plays9"><img class="play___holder" src="img/svg-speaker-white.svg" alt="">
+                            <object class="playing" type="image/svg+xml" data="img/svg-speaker-white-play.svg"></object>
+                        </div>
+                    </div>
+                    <button class="nextbutton nextel"></button>
+                </div>
+            </div>
+            <div id="c10" class="swiper-slide">
+                <div class="gomenu"></div>
+                <div class="assisttext">
+                    <div class="budge"></div>
+                    <div class="line">
+                        <h2>Price</h2> <span class="pron">/praɪs/</span>
+                        <div class="plays" id="plays10"><img class="play___holder" src="img/svg-speaker-white.svg" alt="">
+                            <object class="playing" type="image/svg+xml" data="img/svg-speaker-white-play.svg"></object>
+                        </div>
+                    </div>
+                    <button class="nextbutton nextel"></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/vocab.js"></script>
+    <script>
+        //WON'T WORK IF NOT INLINE
+
+        var swiper = new Swiper('.swiper-container', {
+            init: false,
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            navigation: {
+                nextEl: '.nextel',
+            },
+        });
+
+        swiper.on('init', function () {
+            /* do something */
+            // init Swiper
+            setTimeout(() => {
+                $('header').addClass('animate__animated animate__fadeInDown');
+                $('.assisttext').addClass('animate__animated animate__fadeInUp');
+                $('.gomenu').addClass('animate__animated animate__fadeIn');
+            }, 5500);
+        });
+        swiper.init();
+
+        swiper.on('touchStart', function () {
+            //console.log('swipped');
+            $('header').removeClass('animate__animated animate__fadeInDown');
+            $('.assisttext').removeClass('animate__animated animate__fadeInUp');
+            $('.gomenu').removeClass('animate__animated animate__fadeIn');
+        });
+
+        swiper.on('slideChange', function () {
+            /*console.log('slide changed');*/
+            $('header').addClass('animate__animated animate__fadeInDown');
+            $('.assisttext').addClass('animate__animated animate__fadeInUp');
+            $('.gomenu').addClass('animate__animated animate__fadeIn');
+        });
+
+    </script>
+<!-- <script src="js/playAnimation.js"></script> -->
+<!-- <script src="js/vocabAudioAdvanced.js"></script> -->
+<!-- not working -->
+<script src="js/removeanimate.js"></script>
+</body>
+
+</html>

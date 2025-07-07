@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/vocab_style.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="shortcut icon" href="img/favs/favicon4-.png" type="image/png">
+    <title>e-hippo</title>
+</head>
+
+<body>
+    <div class="loading-container mainload">
+        <img class="logo_splash" src="img/splash_logo.png" alt="">
+        <p class="loading-txt">
+            <p><img class="amoment" src="img/loading.svg" alt=""></p>
+            <!--<span
+            class="txt-rotate"
+            data-period="200"
+            data-rotate='[ "our hippos are running away!", "we are bringing the big net...", "all the hippos in the bag ... starting now ..."]'></span>
+            -->
+        </p>
+    </div>
+
+    <header class="vocabhead">
+        <img class="logo" src="img/logo_white.png" alt="">
+        <h2>VOCABULARY</h2>
+    </header>
+
+    <div class="swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div id="c1" class="swiper-slide">
+                <div class="gomenu">Menu</div>
+                <div class="assisttext">
+                    <div class="budge">Space</div>
+                    <div class="line">
+                    <h2>Space</h2> <span class="pron">/speɪs/</span>
+                    <div class="plays"><img src="img/black_speaker.png" alt=""></div>
+                    </div>
+                    <button class="yellowb nextel">Next</button>
+                </div>
+            </div>
+            <div id="c2" class="swiper-slide">
+                <div class="gomenu">Menu</div>
+                <div class="assisttext">
+                    <div class="budge">Space</div>
+                    <div class="line">
+                    <h2>Space</h2> <span class="pron">/speɪs/</span>
+                    <div class="plays"><img src="img/black_speaker.png" alt=""></div>
+                    </div>
+                    <button class="yellowb nextel">Next</button>
+                </div>
+            </div>
+            <div id="c3" class="swiper-slide">
+                <div class="gomenu">Menu</div>
+                <div class="assisttext">
+                    <div class="budge">Space</div>
+                    <div class="line">
+                    <h2>Space</h2> <span class="pron">/speɪs/</span>
+                    <div class="plays"><img src="img/black_speaker.png" alt=""></div>
+                    </div>
+                    <button class="yellowb nextel">Next</button>
+                </div>
+            </div>
+        </div>
+
+            
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+    </div>
+
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/vocab.js"></script>
+    
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+      init: false,
+      pagination: {
+        el: '.swiper-pagination',
+      },
+      navigation: {
+        nextEl: '.nextel',
+      },
+     /* effect: 'cube',
+      grabCursor: true,
+      cubeEffect: {
+        shadow: true,
+        slideShadows: true,
+        shadowOffset: 20,
+        shadowScale: 0.94,
+      },*/
+    });
+
+    swiper.on('init', function() { /* do something */ 
+        // init Swiper
+        setTimeout(() => {
+            $('header').addClass('animate__animated');
+            $('header').addClass('animate__fadeInDown');
+            $('.assisttext').addClass('animate__animated');
+            $('.assisttext').addClass('animate__fadeInUp');
+            $('.gomenu').addClass('animate__animated');
+            $('.gomenu').addClass('animate__fadeIn');
+        }, 5500);
+    });
+    swiper.init();
+
+    swiper.on('touchStart', function () {
+        /*console.log('swipped');*/
+        $('header').removeClass('animate__animated');
+        $('header').removeClass('animate__fadeInDown');
+        $('.assisttext').removeClass('animate__animated');
+        $('.assisttext').removeClass('animate__fadeInUp');
+        $('.gomenu').removeClass('animate__animated');
+        $('.gomenu').removeClass('animate__fadeIn');
+
+    });
+    
+    swiper.on('slideChange', function () {
+        /*console.log('slide changed');*/
+        $('header').addClass('animate__animated');
+        $('header').addClass('animate__fadeInDown');
+        $('.assisttext').addClass('animate__animated');
+        $('.assisttext').addClass('animate__fadeInUp');
+        $('.gomenu').addClass('animate__animated');
+        $('.gomenu').addClass('animate__fadeIn');
+    });
+
+    </script>
+</body>
+
+</html>

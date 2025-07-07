@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        body{display: flex; flex-direction: column; justify-content: center; align-items: center; overflow: hidden;}
+        .cont{ display: none; position: relative; width: 90%; padding: 0px 5%; height: 80%; position: absolute; top: 20%; flex-direction: column; justify-content: center; align-items: center;}
+        .current{display: flex;}
+        .svgd{width: 90%;}
+        .rotbg{ animation: rot linear 4s infinite; position: absolute; width: 90%; z-index: -1; left: 0; top: 0; right: 0; bottom: 0; margin: auto; opacity: .3;}
+        @keyframes rot {
+                from {transform:rotate(0deg);}
+                to {transform:rotate(360deg);}
+        }
+    </style>
+</head>
+<body>
+    <div id="whitecont1" class="cont current"><object class="svgd" type="image/svg+xml" data="img/svg/congrats.svg"></object><img class="rotbg" src="img/rotbg.png" alt=""><button class="changesvg">Change</button></div>
+    <div id="whitecont2" class="cont"><object class="svgd" type="image/svg+xml" data="img/svg/congrats.svg"></object><button class="changesvg">Change</button></div>
+    <div id="whitecont3" class="cont"><object class="svgd" type="image/svg+xml" data="img/svg/congrats.svg"></object><button class="changesvg">Change</button></div>
+    <div id="whitecont4" class="cont"><object class="svgd" type="image/svg+xml" data="img/svg/congrats.svg"></object><button class="changesvg">Change</button></div>
+    
+
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".changesvg").click(function(){
+                var getPage = $('.current').attr('id');
+                var id = getPage.replace(/whitecont/, '');
+                var x= parseInt(id)+1;
+                $('#whitecont'+id).removeClass('current');
+                $('#whitecont'+x).addClass('current');
+            });
+        });
+    </script>
+</body>
+</html>
