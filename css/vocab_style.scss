@@ -1,0 +1,347 @@
+$darky: #FDCC0D;
+$lighty: #FFDD00;
+$purple: #590eb4;
+$orangew: #FD7D0D;
+$whitish: #fff;
+$lightwhite: #f8f8ff;
+$blackish: #0c0c0c;
+$yellowgrad: linear-gradient(0deg, rgba(253, 204, 13, 1) 0%, rgba(255, 221, 0, 1) 100%);
+$orangegrad: linear-gradient(0deg,rgba(253, 125, 13, 1) 0%, rgba(243, 120, 21, 1)100%);
+$purplegrad: linear-gradient(0deg,rgba(94, 0, 207, 1) 0%, rgba(89, 14, 180, 1)100%);
+
+$bigfont: 2.8em;
+$medfont: 2.0em;
+$smfont: 1.8em;
+$smallfont: 1.2em;
+$tsfont: 1em;
+$tinyfont: 0.8em;
+
+$padding: 0px 6%;
+$width: 88%;
+
+
+@import url("vocabulary-images-beginner.css");
+@import url("vocabulary-images-intermediate.css");
+@import url("vocabulary-images-advanced.css");
+@import url("font2.css");
+@import url("font.css");
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.logo {
+    margin-top: 7px;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.swiper-slide {
+    width: 100%;
+    height: 100%;
+    background: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.beginner.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+    background-color: $darky;
+}
+
+.intermediate.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+    background-color: $orangew;
+}
+
+.advanced.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+    background-color: $purple;
+}
+ 
+.yellowgb{
+    background: $yellowgrad;
+}
+
+.orangegb{
+    background: $orangegrad;
+}
+
+.purplegb{
+    background: $purplegrad;
+}
+
+.assisttext {
+    width: $width;
+    height: 35%;
+    background-color: rgba(0, 0, 0, .3);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    padding: $padding;
+}
+
+.vocabhead h2 {
+    float: right;
+    font-family: 'open-extrab';
+    color: $whitish;
+    font-size: 1.8em;
+    letter-spacing: -3px;
+}
+
+.vocabhead {
+    padding: $padding;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: absolute;
+    width: $width;
+    height: 40px;
+    background-color: rgba(0, 0, 0, .3);
+    z-index: 9999;
+}
+
+.budge {
+    width: 120px;
+    height: 30px;
+    font-size: $tsfont;
+    border-radius: 30px;
+    background-color: $darky;
+    margin-top: -15px;
+    text-align: center;
+    line-height: 30px;
+    font-weight: bold;
+    color: $blackish;
+    font-family: 'open-semi';
+}
+
+.plays {
+    background-color: $darky;
+    border-radius: 100%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: 20px;
+}
+
+.line {
+    position: relative;
+}
+
+.plays img {
+    //margin-top: -7px;
+    //margin-left: 7px;
+    width: 60%;
+}
+
+.assisttext h2 {
+    margin: 10px 0px 5px 0px;
+}
+
+.nextbutton {
+    width: 100%;
+    height: 50px;
+    color: #fafafa;
+    font-size: $tsfont;
+    font-family: 'open-semi';
+    margin: 8% 0px 3% 0px;
+    border: none;
+}
+
+.yellowb {
+    @extend .nextbutton;
+    color: $blackish;
+    background-color: $darky;
+}
+
+.line {
+    h2 {
+        font-family: 'open-semi';
+        font-size: $medfont;
+        color: $whitish;
+    }
+
+    span {
+        @extend h2;
+        font-size: $smallfont;
+        color: $lightwhite;
+        opacity: .8;
+    }
+}
+
+.loading-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #5E00CF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.loading-container.mainload {
+    background-color: #FDCC0D;
+}
+
+.loading-txt {
+    display: block;
+    color: #fafafa;
+    font-size: 0.8em;
+}
+
+.loading-txt span {
+    transition: cubic-bezier(1, -0.1, 0, 0.93);
+}
+
+.wrap {
+    transition: ease-in-out;
+    color: #fafafa;
+}
+
+.loading-container {
+    z-index: 99999;
+    transition: cubic-bezier(0.6, -0.28, 0.735, 0.045) 2s;
+}
+
+.loading-txt {
+    width: 125px;
+    display: none;
+}
+
+.gomenu {
+    font-family: 'open-light';
+    color: $whitish;
+    padding: 3px 20px;
+    font-size: $tinyfont;
+    border: 1px solid $whitish;
+    width: fit-content;
+    border-radius: 12px;
+    margin: 15px 0px;
+    position: absolute;
+    right: 6%;
+    top: 80px;
+    // text-shadow: 1px 1px 2px #0c0c0cf5;
+    -webkit-box-shadow: 1px 1px 2px #0c0c0c2e;
+    box-shadow: 1px 1px 2px #0c0c0c2e;
+    background-color: rgba(20, 20, 20, .2);
+}
+
+@mixin theme($name, $color, $text) {
+    .#{$name} {
+        .swiper-wrapper {
+            .swiper-slide {
+                .assisttext {
+                    .budge, button, .plays {
+                        background-color: $color;
+                        color: $text;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include theme(beginner, $darky, $blackish);
+@include theme(intermediate, $orangew, $whitish);
+@include theme(advanced, $purple, $whitish);
+
+.logo_splash{
+    width: 30%;
+    opacity: .8;
+}
+
+// advanced budge content
+
+.worksheet .budge::before{
+    content: 'Worksheets';
+}
+
+.technology .budge::before{
+    content: 'Technology';
+}
+.work .budge::before{
+    content: 'Work';
+}
+.health .budge::before{
+    content: 'Health';
+}
+.social .budge::before{
+    content: 'Social';
+}
+
+// intermediate budge content
+
+.food .budge::before{
+    content: 'Food';
+}
+
+.travel .budge::before{
+    content: 'Travel';
+}
+.hobbies .budge::before{
+    content: 'Hobbies';
+}
+.transportation .budge::before{
+    content: 'Transportation';
+}
+.family .budge::before{
+    content: 'Family';
+}
+
+// beginner budge content
+
+.animals .budge::before{
+    content: 'Animals';
+}
+
+.numbers .budge::before{
+    content: 'Numbers';
+}
+.colors .budge::before{
+    content: 'Colors';
+}
+.shapes .budge::before{
+    content: 'Shapes';
+}
+.weather .budge::before{
+    content: 'Weather';
+}
+
+// buttons content
+
+.gomenu:before{
+    content: 'Menu';
+}
+
+.nextel:before{
+    content: 'Next';
+}
+
+.assisttext h2{
+    width: 80%;
+}
+
+.playing{
+    position: absolute;
+    margin: auto;
+    left: 0; right: 0;bottom: 0;top: 0;
+    width: 60%;
+    display: none;
+}

@@ -1,0 +1,173 @@
+
+// FOOD
+[data-cat='food']{
+    &[data-image='noodle'] {
+    background-image: url('../img/vocab/intermediate/food/noodle.jpg');
+    }   
+
+    &[data-image='egg'] {
+        background-image: url('../img/vocab/intermediate/food/egg.jpg');
+    }
+    &[data-image='steak'] {
+        background-image: url('../img/vocab/intermediate/food/steak.jpg');
+    }
+    &[data-image='pork'] {
+        background-image: url('../img/vocab/intermediate/food/pork.jpg');
+    }
+    &[data-image='rice'] {
+    background-image: url('../img/vocab/intermediate/food/rice.jpg');
+    }
+    &[data-image='salad'] {
+    background-image: url('../img/vocab/intermediate/food/salad.jpg');
+    }
+    &[data-image='icecream'] {
+    background-image: url('../img/vocab/intermediate/food/icecream.jpg');
+    }
+    &[data-image='watermelon'] {
+    background-image: url('../img/vocab/intermediate/food/watermelon.jpg');
+    }
+    &[data-image='fish'] {
+    background-image: url('../img/vocab/intermediate/food/fish.jpg');
+    }
+    &[data-image='pizza'] {
+    background-image: url('../img/vocab/intermediate/food/pizza.jpg');
+    }
+}
+// TRAVEL
+[data-cat='travel']{
+    &[data-image='suitcase'] {
+    background-image: url('../img/vocab/intermediate/travel/suitcase.jpg');
+    }   
+
+    &[data-image='passport'] {
+        background-image: url('../img/vocab/intermediate/travel/passport.jpg');
+    }
+    &[data-image='camera'] {
+        background-image: url('../img/vocab/intermediate/travel/camera.jpg');
+    }
+    &[data-image='sunglasses'] {
+        background-image: url('../img/vocab/intermediate/travel/sunglasses.jpg');
+    }
+    &[data-image='hotel'] {
+    background-image: url('../img/vocab/intermediate/travel/hotel.jpg');
+    }
+    &[data-image='airplane'] {
+    background-image: url('../img/vocab/intermediate/travel/airplane.jpg');
+    }
+    &[data-image='checkin'] {
+    background-image: url('../img/vocab/intermediate/travel/checkin.jpg');
+    }
+    &[data-image='seat'] {
+    background-image: url('../img/vocab/intermediate/travel/seat.jpg');
+    }
+    &[data-image='taxi'] {
+    background-image: url('../img/vocab/intermediate/travel/taxi.jpg');
+    }
+    &[data-image='boardingpass'] {
+    background-image: url('../img/vocab/intermediate/travel/boardingpass.jpg');
+    }
+}
+//HOBBIE
+[data-cat='hobbie']{
+    &[data-image='music'] {
+    background-image: url('../img/vocab/intermediate/hobbies/music.jpg');
+    }   
+
+    &[data-image='paint'] {
+        background-image: url('../img/vocab/intermediate/hobbies/paint.jpg');
+    }
+    &[data-image='cook'] {
+        background-image: url('../img/vocab/intermediate/hobbies/cook.jpg');
+    }
+    &[data-image='soccer'] {
+        background-image: url('../img/vocab/intermediate/hobbies/soccer.jpg');
+    }
+    &[data-image='read'] {
+    background-image: url('../img/vocab/intermediate/hobbies/read.jpg');
+    }
+    &[data-image='dance'] {
+    background-image: url('../img/vocab/intermediate/hobbies/dance.jpg');
+    }
+    &[data-image='computergame'] {
+    background-image: url('../img/vocab/intermediate/hobbies/computergame.jpg');
+    }
+    &[data-image='tennis'] {
+    background-image: url('../img/vocab/intermediate/hobbies/tennis.jpg');
+    }
+    &[data-image='basketball'] {
+    background-image: url('../img/vocab/intermediate/hobbies/basketball.jpg');
+    }
+    &[data-image='tabletennis'] {
+    background-image: url('../img/vocab/intermediate/hobbies/tabletennis.jpg');
+    }
+}
+
+//TRANSPORTATION
+[data-cat='transportation']{
+    &[data-image='car'] {
+    background-image: url('../img/vocab/intermediate/transportation/car.jpg');
+    }   
+
+    &[data-image='bus'] {
+        background-image: url('../img/vocab/intermediate/transportation/bus.jpg');
+    }
+    &[data-image='plane'] {
+        background-image: url('../img/vocab/intermediate/transportation/plane.jpg');
+    }
+    &[data-image='bicycle'] {
+        background-image: url('../img/vocab/intermediate/transportation/bicycle.jpg');
+    }
+    &[data-image='train'] {
+    background-image: url('../img/vocab/intermediate/transportation/train.jpg');
+    }
+    &[data-image='motorcycle'] {
+    background-image: url('../img/vocab/intermediate/transportation/motorcycle.jpg');
+    }
+    &[data-image='ambulance'] {
+    background-image: url('../img/vocab/intermediate/transportation/ambulance.jpg');
+    }
+    &[data-image='truck'] {
+    background-image: url('../img/vocab/intermediate/transportation/truck.jpg');
+    }
+    &[data-image='hotairballoon'] {
+    background-image: url('../img/vocab/intermediate/transportation/hotairballoon.jpg');
+    }
+    &[data-image='ship'] {
+    background-image: url('../img/vocab/intermediate/transportation/ship.jpg');
+    }
+}
+
+//FAMILY
+[data-cat='family']{
+    &[data-image='mom'] {
+    background-image: url('../img/vocab/intermediate/family/mom.jpg');
+    }   
+
+    &[data-image='dad'] {
+        background-image: url('../img/vocab/intermediate/family/dad.jpg');
+    }
+    &[data-image='brother'] {
+        background-image: url('../img/vocab/intermediate/family/brother.jpg');
+    }
+    &[data-image='sister'] {
+        background-image: url('../img/vocab/intermediate/family/sister.jpg');
+    }
+    &[data-image='grandma'] {
+    background-image: url('../img/vocab/intermediate/family/grandma.jpg');
+    }
+    &[data-image='grandpa'] {
+    background-image: url('../img/vocab/intermediate/family/grandpa.jpg');
+    }
+    &[data-image='uncle'] {
+    background-image: url('../img/vocab/intermediate/family/uncle.jpg');
+    }
+    &[data-image='aunt'] {
+    background-image: url('../img/vocab/intermediate/family/aunt.jpg');
+    }
+    &[data-image='cousin'] {
+    background-image: url('../img/vocab/intermediate/family/cousin.jpg');
+    }
+    &[data-image='family'] {
+    background-image: url('../img/vocab/intermediate/family/family.jpg');
+    }
+}

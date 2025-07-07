@@ -1,0 +1,154 @@
+[data-cat=animal][data-image=dog] {
+  background-image: url("../img/vocab/beginner/animals/dog.jpg");
+}
+[data-cat=animal][data-image=cat] {
+  background-image: url("../img/vocab/beginner/animals/cat.jpg");
+}
+[data-cat=animal][data-image=monkey] {
+  background-image: url("../img/vocab/beginner/animals/monkey.jpg");
+}
+[data-cat=animal][data-image=giraffe] {
+  background-image: url("../img/vocab/beginner/animals/giraffe.jpg");
+}
+[data-cat=animal][data-image=hippopotamus] {
+  background-image: url("../img/vocab/beginner/animals/hippopotamus.jpg");
+}
+[data-cat=animal][data-image=mouse] {
+  background-image: url("../img/vocab/beginner/animals/mouse.jpg");
+}
+[data-cat=animal][data-image=dolphin] {
+  background-image: url("../img/vocab/beginner/animals/dolphin.jpg");
+}
+[data-cat=animal][data-image=crab] {
+  background-image: url("../img/vocab/beginner/animals/crab.jpg");
+}
+[data-cat=animal][data-image=cow] {
+  background-image: url("../img/vocab/beginner/animals/cow.jpg");
+}
+[data-cat=animal][data-image=chicken] {
+  background-image: url("../img/vocab/beginner/animals/chicken.jpg");
+}
+
+[data-cat=color][data-image=red] {
+  background-image: url("../img/vocab/beginner/colors/red.jpg");
+}
+[data-cat=color][data-image=green] {
+  background-image: url("../img/vocab/beginner/colors/green.jpg");
+}
+[data-cat=color][data-image=blue] {
+  background-image: url("../img/vocab/beginner/colors/blue.jpg");
+}
+[data-cat=color][data-image=yellow] {
+  background-image: url("../img/vocab/beginner/colors/yellow.jpg");
+}
+[data-cat=color][data-image=pink] {
+  background-image: url("../img/vocab/beginner/colors/pink.jpg");
+}
+[data-cat=color][data-image=orange] {
+  background-image: url("../img/vocab/beginner/colors/orange.jpg");
+}
+[data-cat=color][data-image=white] {
+  background-image: url("../img/vocab/beginner/colors/white.jpg");
+}
+[data-cat=color][data-image=black] {
+  background-image: url("../img/vocab/beginner/colors/black.jpg");
+}
+[data-cat=color][data-image=purple] {
+  background-image: url("../img/vocab/beginner/colors/purple.jpg");
+}
+[data-cat=color][data-image=brown] {
+  background-image: url("../img/vocab/beginner/colors/brown.jpg");
+}
+
+[data-cat=number][data-image="1"] {
+  background-image: url("../img/vocab/beginner/numbers/1.jpg");
+}
+[data-cat=number][data-image="2"] {
+  background-image: url("../img/vocab/beginner/numbers/2.jpg");
+}
+[data-cat=number][data-image="3"] {
+  background-image: url("../img/vocab/beginner/numbers/3.jpg");
+}
+[data-cat=number][data-image="4"] {
+  background-image: url("../img/vocab/beginner/numbers/4.jpg");
+}
+[data-cat=number][data-image="5"] {
+  background-image: url("../img/vocab/beginner/numbers/5.jpg");
+}
+[data-cat=number][data-image="6"] {
+  background-image: url("../img/vocab/beginner/numbers/6.jpg");
+}
+[data-cat=number][data-image="7"] {
+  background-image: url("../img/vocab/beginner/numbers/7.jpg");
+}
+[data-cat=number][data-image="8"] {
+  background-image: url("../img/vocab/beginner/numbers/8.jpg");
+}
+[data-cat=number][data-image="9"] {
+  background-image: url("../img/vocab/beginner/numbers/9.jpg");
+}
+[data-cat=number][data-image="10"] {
+  background-image: url("../img/vocab/beginner/numbers/10.jpg");
+}
+
+[data-cat=shape][data-image=square] {
+  background-image: url("../img/vocab/beginner/shapes/square.jpg");
+}
+[data-cat=shape][data-image=triangle] {
+  background-image: url("../img/vocab/beginner/shapes/triangle.jpg");
+}
+[data-cat=shape][data-image=rectangle] {
+  background-image: url("../img/vocab/beginner/shapes/rectangle.jpg");
+}
+[data-cat=shape][data-image=circle] {
+  background-image: url("../img/vocab/beginner/shapes/circle.jpg");
+}
+[data-cat=shape][data-image=star] {
+  background-image: url("../img/vocab/beginner/shapes/star.jpg");
+}
+[data-cat=shape][data-image=oval] {
+  background-image: url("../img/vocab/beginner/shapes/oval.jpg");
+}
+[data-cat=shape][data-image=cross] {
+  background-image: url("../img/vocab/beginner/shapes/cross.jpg");
+}
+[data-cat=shape][data-image=pentagon] {
+  background-image: url("../img/vocab/beginner/shapes/pentagon.jpg");
+}
+[data-cat=shape][data-image=kite] {
+  background-image: url("../img/vocab/beginner/shapes/kite2.jpg");
+}
+[data-cat=shape][data-image=heart] {
+  background-image: url("../img/vocab/beginner/shapes/heart.jpg");
+}
+
+[data-cat=weather][data-image=sunny] {
+  background-image: url("../img/vocab/beginner/weather/sunny.jpg");
+}
+[data-cat=weather][data-image=rainy] {
+  background-image: url("../img/vocab/beginner/weather/rainy.jpg");
+}
+[data-cat=weather][data-image=snowy] {
+  background-image: url("../img/vocab/beginner/weather/snowy.jpg");
+}
+[data-cat=weather][data-image=windy] {
+  background-image: url("../img/vocab/beginner/weather/windy.jpg");
+}
+[data-cat=weather][data-image=cloudy] {
+  background-image: url("../img/vocab/beginner/weather/cloudy.jpg");
+}
+[data-cat=weather][data-image=foggy] {
+  background-image: url("../img/vocab/beginner/weather/foggy.jpg");
+}
+[data-cat=weather][data-image=stormy] {
+  background-image: url("../img/vocab/beginner/weather/stormy.jpg");
+}
+[data-cat=weather][data-image=partly] {
+  background-image: url("../img/vocab/beginner/weather/partly.jpg");
+}
+[data-cat=weather][data-image=sleet] {
+  background-image: url("../img/vocab/beginner/weather/sleet.jpg");
+}
+[data-cat=weather][data-image=hail] {
+  background-image: url("../img/vocab/beginner/weather/hail.jpg");
+}/*# sourceMappingURL=getImagesBeginner.css.map */

@@ -1,0 +1,238 @@
+.bottxt {
+  margin: 0;
+  color: white;
+  display: block;
+}
+.bottxt.helpt::before {
+  content: "Help";
+}
+.bottxt.skipt::before {
+  content: "Skip";
+}
+
+.iccont {
+  height: 30%;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.opttextcont {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  align-items: center;
+}
+
+.optionletter {
+  font-family: "open-regular";
+  font-size: 1.2em;
+  border: 1px solid #707070;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 30px;
+  transition: all 1s ease-in-out;
+  visibility: hidden;
+  background-color: #fff;
+}
+.optionletter.right {
+  border: 1.2px solid #590eb4;
+  height: 42px;
+  width: 42px;
+  position: relative;
+  color: #590eb4;
+  font-size: 1.2em;
+  font-family: "open-semi";
+  line-height: 42px;
+}
+.optionletter.right:after {
+  content: "";
+  background: url("../img/right.png") no-repeat center;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background-color: #590eb4;
+  margin: -50px auto;
+  display: block;
+}
+.optionletter.wrong:hover {
+  transition: 0.5s ease-in;
+  color: #FD7D0D;
+  border-color: #FD7D0D;
+}
+.optionletter.moved {
+  transition: all 1s ease-in-out;
+  border: 1px solid #590eb4;
+  height: 39px;
+  width: 39px;
+  color: #590eb4;
+  font-size: 1.2em;
+  font-family: "open-semi";
+  line-height: 39px;
+  z-index: 999;
+  pointer-events: none;
+}
+.optionletter.moveds {
+  transition: all 1s ease-in-out;
+  border: 1px solid #590eb4;
+  height: 28px;
+  width: 28px;
+  color: #590eb4;
+  font-size: 1.2em;
+  font-family: "open-semi";
+  line-height: 28px;
+  z-index: 999;
+  pointer-events: none;
+}
+
+.instruct {
+  margin: 15px 0;
+}
+.instruct::before {
+  content: "Complete the sentence with the missing word(s)";
+}
+
+/*
+.keysentence{
+    &[data-keyword='lion']{
+        &::before{
+            content: "There's a lion in my garden ";
+        }
+    }
+
+}
+*/
+.key {
+  color: white;
+  width: 120px;
+  height: 30px;
+  border-radius: 5px;
+  border: #0c0c0c 1px solid;
+  position: relative;
+  padding: 5px 17px;
+  margin: 0 5px;
+  animation: bordera 1s ease-in-out;
+}
+.key.smallkey {
+  padding: 0.04em 0.6em;
+  margin: 0 0.1em;
+}
+.key.displaytext {
+  color: #590eb4;
+  transition: 1s ease-in;
+}
+.key .pointer {
+  width: 50px;
+  animation: ks 1s ease-in infinite;
+  width: 50px;
+  position: absolute;
+  right: -10px;
+  pointer-events: none;
+}
+
+@keyframes ks {
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+    transform: rotate(-45deg);
+    right: -20px;
+    width: 80px;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+.help, .skip {
+  background-color: #FDCC0D;
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 3px 8px 0px rgba(253, 204, 13, 0.3);
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 5px;
+  bottom: -25px;
+}
+
+.skip {
+  background-color: #590eb4;
+  left: 5px;
+  box-shadow: 0px 3px 8px 0px rgba(94, 0, 207, 0.3);
+}
+
+.keysentence {
+  margin: 20% 0;
+  line-height: 40px;
+  font-size: 1.2em;
+}
+
+.first {
+  animation: glow 1s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0% {
+    border: 1px solid #999999;
+  }
+  50% {
+    border: 1px solid rgb(94, 94, 94);
+    transform: scale(1.05);
+  }
+  100% {
+    border: 1px solid #999999;
+  }
+}
+.answer .key {
+  border: none;
+  color: #590eb4;
+  font-family: open-semi;
+  padding: 0;
+}
+
+.answer {
+  font-size: 1.2em;
+  /* background-color: #f5f5f9; */
+  margin: 30px 10% 20px 10%;
+  /* border-radius: 0.5em; */
+  /* COLOR: black;*/
+}
+
+.lettercont {
+  display: inline-block;
+}
+
+.success .answer .lettercont {
+  color: #590eb4;
+  font-family: open-semi;
+}
+
+.helpme .helptxt {
+  color: #590eb4;
+  font-family: open-semi;
+  margin: 10% 30px 10% 20px;
+  display: flex;
+  flex-direction: row;
+  font-size: 1.2em;
+}
+.helpme .helptxt div {
+  border: 1px solid #590eb4;
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  margin: 0.05em;
+  box-shadow: 0px 3px 8px 0px rgba(94, 0, 207, 0.3);
+}
+
+.answerhelp::after {
+  content: "The missing word is:";
+}/*# sourceMappingURL=writingsheet.css.map */

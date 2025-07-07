@@ -1,0 +1,110 @@
+.playing {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: 60%;
+  display: none;
+}
+
+.plays, .help, .skip {
+  background-color: #FD7D0D;
+  border-radius: 100%;
+  width: 110px;
+  height: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-shadow: 0px 7px 14px 0px rgba(253, 125, 13, 0.5);
+  z-index: 999;
+}
+
+.help, .skip {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  background-color: #feb372;
+  box-shadow: 0px 3px 12px 0px rgba(253, 125, 13, 0.3);
+  visibility: hidden;
+  z-index: 1;
+}
+
+.skip {
+  background-color: #c297f7;
+  box-shadow: 0px 3px 12px 0px rgba(94, 0, 207, 0.3);
+  visibility: hidden;
+  z-index: 1;
+}
+
+.bottxt {
+  margin: 0;
+  color: white;
+  display: block;
+}
+.bottxt.helpt::before {
+  content: "Help";
+}
+.bottxt.skipt::before {
+  content: "Skip";
+}
+
+.line {
+  position: relative;
+}
+
+img.play___holder {
+  width: 60%;
+}
+
+.headexe:before {
+  content: "Listening+";
+}
+
+.iccont {
+  justify-content: space-between;
+  height: 30%;
+}
+
+.optimagecont {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.optionimage {
+  width: 31%;
+  height: 160px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  visibility: hidden;
+  border-radius: 8px;
+  box-shadow: 0px 10px 12px 0px rgba(202, 90, 10, 0.3);
+}
+
+.instruct {
+  margin: 15px 0;
+}
+.instruct::before {
+  content: "Match the audio with the picture below";
+}
+
+.correcta {
+  animation: righta 0.8s ease-in forwards;
+  transform: scale(110%);
+  box-shadow: 0px 5px 10px 0px rgb(94, 0, 207);
+}
+
+@keyframes righta {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+    box-shadow: 0px 5px 10px 0px rgb(94, 0, 207);
+  }
+}/*# sourceMappingURL=listeningsheet.css.map */

@@ -1,0 +1,129 @@
+$darky: #FDCC0D;
+$lighty: #FFDD00;
+$purple: #590eb4;
+$orangew: #FD7D0D;
+$whitish: #fff;
+$lightwhite: #f8f8ff;
+$blackish: #0c0c0c;
+$yellowgrad: linear-gradient(0deg, rgba(253, 204, 13, 1) 0%, rgba(255, 221, 0, 1) 100%);
+$orangegrad: linear-gradient(0deg,rgba(253, 125, 13, 1) 0%, rgba(243, 120, 21, 1)100%);
+$purplegrad: linear-gradient(0deg,rgba(94, 0, 207, 1) 0%, rgba(89, 14, 180, 1)100%);
+
+$bigfont: 2.8em;
+$medfont: 2.0em;
+$smfont: 1.8em;
+$smallfont: 1.2em;
+$tsfont: 1em;
+$tinyfont: 0.8em;
+
+$padding: 0px 6%;
+$width: 88%;
+
+.playing{
+    position: absolute;
+    margin: auto;
+    left: 0; right: 0;bottom: 0;top: 0;
+    width: 60%;
+    display: none;
+}
+
+.plays {
+    background-color: $orangew;
+    border-radius: 100%;
+    width: 110px;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 0px 7px 14px 0px rgba(253,125,13,.5);
+    z-index: 999;
+}
+
+.help{
+    @extend .plays;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    background-color: lighten($orangew, 20%);
+    box-shadow: 0px 3px 12px 0px rgba(253,125,13,.3);
+    visibility: hidden;
+    z-index: 1;
+}
+
+.skip{
+    @extend .help;
+    background-color: lighten($purple, 40%);
+    box-shadow: 0px 3px 12px 0px rgba(94,0,207,.3);
+    visibility: hidden;
+    z-index: 1;
+}
+
+.bottxt{
+    margin: 0;
+    color: white;
+    display: block;
+    &.helpt::before{
+            content: 'Help';
+    }
+    &.skipt::before{
+        content: 'Skip';
+    }
+}
+
+.line {
+    position: relative;
+}
+
+img.play___holder {
+    width: 60%;
+}
+
+.headexe:before{
+    content: 'Listening+';
+}
+
+.iccont{
+    justify-content: space-between;
+    height: 30%;
+}
+
+.optimagecont{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.optionimage{
+    width: 31%;
+    height: 160px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    visibility: hidden;
+    border-radius: 8px;
+    box-shadow: 0px 10px 12px 0px rgba(202,90,10,.3);
+}
+
+.instruct{
+    margin: 15px 0;
+    &::before{
+        content: 'Match the audio with the picture below';
+    }
+}
+
+.correcta{
+    animation: righta 0.8s ease-in forwards;
+    transform: scale(110%);
+    box-shadow: 0px 5px 10px 0px rgba(94,0,207,1);
+}
+
+@keyframes righta{
+    from{
+        transform: scale(1);
+    }to{
+        transform: scale(1.1);
+        box-shadow: 0px 5px 10px 0px rgba(94,0,207,1);
+    }
+}

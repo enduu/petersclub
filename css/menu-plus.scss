@@ -1,0 +1,126 @@
+$darky: #fdcc0d;
+$lighty: #FFDD00;
+$purple: #590eb4;
+$lightp: ligthen(#590eb4,30%);
+$orangew: #FD7D0D;
+$whitish: #fff;
+$lightwhite: #f8f8ff;
+$blackish: #0c0c0c;
+$lightograd1: darken($orangew,5%);
+$lightograd2: darken($orangew,1.0%);
+$darko: darken($orangew,10%);
+$darkp: darken($purple,10%);
+$darkery: darken($darky,10%);
+
+$dyellowgrad: linear-gradient(0deg, rgba(209, 174, 33, 1) 0%, rgba(170, 149, 12, 1) 100%);
+$yellowgrad: linear-gradient(0deg, rgba(253, 204, 13, 1) 0%, rgba(255, 221, 0, 1) 100%);
+$orangegrad: linear-gradient(0deg,rgba(253, 125, 13, 1) 0%, rgba(243, 120, 21, 1)100%);
+$dorangegrad: linear-gradient(0deg,$lightograd1 0%, $lightograd2 100%);
+$purplegrad: linear-gradient(0deg,rgba(94, 0, 207, 1) 0%, rgba(89, 14, 180, 1)100%);
+$whitegrad: linear-gradient(0deg,$whitish 0%, $lightwhite 100%);
+
+$bigfont: 2.8em;
+$medfont: 2.0em;
+$smfont: 1.8em;
+$smallfont: 1.2em;
+$tsfont: 1em;
+$tinyfont: 0.8em;
+
+$padding: 0px 6%;
+$width: 88%;
+
+body{
+    &.exercises{
+    //background: $whitegrad;
+    background: linear-gradient(0deg, #5e00cfad 0%, #5e00cf 100%);
+    }
+}
+
+.menucont{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.menubut{
+    width: 75%;
+    height: 2.8em;
+    border-radius: 0.1em;
+    text-align: left;
+    line-height: 2.8em;
+    color: $lightwhite;
+    padding: 1.2em;
+    margin: 1.6em 0;
+    text-shadow: 1px 1px 3px lighten($blackish, 20%);
+    visibility: hidden;
+
+    &.beginner{
+        background-color: $darky;
+        box-shadow: 0px 7px 14px 0px $darky;
+    }
+    &.intermediate{
+        background-color: $orangew;
+        box-shadow: 0px 7px 14px 0px $darko;
+    }
+    &.advanced{
+        background-color: $purple;
+        box-shadow: 0px 7px 14px 0px $darkp;
+    }
+}
+
+.svgcon{
+    width: 40%;
+    margin: 1em 0;
+}
+
+object{
+    width: 100%;
+}
+
+.back{
+    position: absolute;
+    right: -20px;
+    width: 40px;
+    height: 40px;
+    visibility: hidden;
+    //border-radius: 100%;
+    background-color: $darky;
+    line-height: 40px;
+    padding: 12px;
+    top: 10%;
+    box-shadow: 0px 3px 7px 0px $darky;
+    p{
+        color: $lightwhite;
+        font-size: 2em;
+        transform: scale(1,1.4);
+        margin: 0;
+        text-shadow: 1px 1px 3px lighten($blackish, 20%);
+        
+    }
+}
+
+.logo-bot{
+    position: absolute;
+    bottom: 8%;
+    left: auto;
+    right: auto;
+}
+
+body{
+    &.memory{
+        background: linear-gradient(0deg, #ffdd00 0%, #ffdd00 100%);
+        //background: $whitegrad;
+        .menucont{
+            .beginner{
+                box-shadow: 0px 7px 14px 0px #deb822;
+            }
+        }
+    }
+    &.listening{
+        //background: linear-gradient(0deg, #ffdd00 0%, #ffdd00 100%);
+        background: $dorangegrad;
+    }
+}
