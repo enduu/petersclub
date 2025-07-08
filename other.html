@@ -40,7 +40,8 @@
             slide.className = 'swiper-slide';
             let imgPath = `imgs/oth/${isSmallScreen ? 'ss' : 'bs'}/oth (${i}).jpg`;
             slide.innerHTML = `
-                <img src="${imgPath}" class="slideimg" loading="lazy" style="width:100%;height:100%;object-fit:contain;" />
+                <div class="img-loader"><div class="loader"></div></div>
+                <img src="${imgPath}" class="slideimg" style="width:100%;height:100%;object-fit:contain;" />
                 <div class='gomenu'></div>
                 <div class='assisttext'><div class='budge'>Worksheets</div><div class='line'><h2>Other</h2> <span class='pron'>Page: ${i}</span><div class='plays' id='download${i}'><img class='play___holder' src='img/download.svg' alt=''><object class='playing' type='image/svg+xml' data='img/download.svg'></object></div></div><button class='nextbutton nextel'></button></div>
             `;
@@ -93,6 +94,25 @@
             document.querySelectorAll('.gomenu').forEach(e => e.classList.add('animate__animated', 'animate__fadeIn'));
         });
         document.addEventListener('DOMContentLoaded', function() {
+            // Loader logic for each slide image
+            document.querySelectorAll('.swiper-slide').forEach(function(slide) {
+                const img = slide.querySelector('img.slideimg');
+                const loader = slide.querySelector('.img-loader');
+                if (img && loader) {
+                    // Hide loader if image is already loaded (from cache)
+                    if (img.complete && img.naturalWidth !== 0) {
+                        loader.style.display = 'none';
+                    } else {
+                        loader.style.display = 'flex';
+                        img.addEventListener('load', function() {
+                            loader.style.display = 'none';
+                        });
+                        img.addEventListener('error', function() {
+                            loader.innerHTML = '<span style="color:red">Image failed</span>';
+                        });
+                    }
+                }
+            });
             for (let i = 1; i <= slideCount; i++) {
                 let btn = document.getElementById('download' + i);
                 if (btn) {

@@ -385,11 +385,10 @@ body.purpleb2 {
   .swiper-slide:not(.lvli) {
     background-size: contain;
   }
-}/*# sourceMappingURL=main.css.map */
-
+}
 
 /* HTML: <div class="loader"></div> */
-.loader {
+/* .loader {
   width: 60px;
   aspect-ratio: 1;
   display: grid;
@@ -423,4 +422,31 @@ body.purpleb2 {
   33%  {transform:perspective(150px) rotateX(-180deg) rotateY(0deg)    rotateX(0deg)}
   66%  {transform:perspective(150px) rotateX(-180deg) rotateY(-180deg) rotateX(0deg)}
   100% {transform:perspective(150px) rotateX(-180deg) rotateY(-180deg) rotateX(-180deg);filter:grayscale(0.8)}
+} */
+
+.img-loader {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  z-index: 2;
+  border-radius: 0.8vh;
+  pointer-events: none;
+  transition: opacity 0.2s;
 }
+.img-loader .loader {
+  width: 25px;
+  height: 25px;
+  border: 3px solid #bdbdbd;
+  border-top: 3px solid #6a4cff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  background: none;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.swiper-slide { position: relative; }
