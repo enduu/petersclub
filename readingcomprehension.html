@@ -26,7 +26,6 @@
         <div class="swiper-wrapper economy">
             <!-- Slides will go here. Replace with static HTML or JS if needed. -->
         </div>
-        <div class="swiper-pagination"></div>
     </div>
     <script src="js/jquery-1.8.3.min.js"></script>
     <script src="js/swiper.min.js"></script>
@@ -34,26 +33,52 @@
     <script>
         var slideCount = 118;
         var wrapper = document.querySelector('.swiper-wrapper');
+        var isSmallScreen = window.innerWidth < 1000;
         for (let i = 1; i <= slideCount; i++) {
             let slide = document.createElement('div');
             slide.id = 'c' + i;
             slide.className = 'swiper-slide';
-            slide.style.backgroundImage = `url('img/rc/rc (${i}).jpg')`;
-            slide.innerHTML = `<div class='gomenu'></div><div class='assisttext'><div class='budge'>Worksheets</div><div class='line'><h2>Sight words</h2> <span class='pron'>Page: ${i}/ ${slideCount}</span><div class='plays' id='download${i}'><img class='play___holder' src='img/download.svg' alt=''><object class='playing' type='image/svg+xml' data='img/download.svg'></object></div></div><button class='nextbutton nextel'></button></div>`;
+            let imgPath = `imgs/rc/${isSmallScreen ? 'ss' : 'bs'}/rc (${i}).jpg`;
+            slide.innerHTML = `
+                <img src="${imgPath}" class="slideimg" loading="lazy" style="width:100%;height:100%;object-fit:contain;" />
+                <div class='gomenu'></div>
+                <div class='assisttext'><div class='budge'>Worksheets</div><div class='line'><h2>Sight words</h2> <span class='pron'>Page: ${i}/ ${slideCount}</span><div class='plays' id='download${i}'><img class='play___holder' src='img/download.svg' alt=''><object class='playing' type='image/svg+xml' data='img/download.svg'></object></div></div><button class='nextbutton nextel'></button></div>
+            `;
             wrapper.appendChild(slide);
         }
+
         var swiper = new Swiper('.swiper-container', {
             init: false,
             navigation: {
                 nextEl: '.nextel',
             },
+            lazy: {
+                loadPrevNext: true,
+                loadPrevNextAmount: 2,
+                loadOnTransitionStart: true
+            },
+            // pagination removed
         });
         swiper.on('init', function () {
+            const loader = document.querySelector('.loading-container');
+            let loaderStart = window.loaderStart || Date.now();
+            const minLoaderTime = 1300;
+            const elapsed = Date.now() - loaderStart;
+            const hideLoader = () => {
+                loader.style.transition = 'opacity 0.3s';
+                loader.style.opacity = 0;
+                setTimeout(() => { loader.style.display = 'none'; }, 300);
+            };
+            if (elapsed < minLoaderTime) {
+                setTimeout(hideLoader, minLoaderTime - elapsed);
+            } else {
+                hideLoader();
+            }
             setTimeout(() => {
                 document.querySelector('header').classList.add('animate__animated', 'animate__fadeInDown');
                 document.querySelectorAll('.assisttext').forEach(e => e.classList.add('animate__animated', 'animate__fadeInUp'));
                 document.querySelectorAll('.gomenu').forEach(e => e.classList.add('animate__animated', 'animate__fadeIn'));
-            }, 5500);
+            }, 1200);
         });
         swiper.init();
         swiper.on('touchStart', function () {

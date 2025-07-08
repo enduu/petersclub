@@ -44,6 +44,7 @@
         <div class="swiper-container">
             <div class="vocabcarousel swiper-wrapper">
                 <div id="level1" class="lvli swiper-slide">
+                    <div class="img-loader"><div class="loader"></div></div>
                     <h3>Sight words 🔥</h3>
                     <p>Sight word worksheets to practice writing and word recognition.</p>
                     <div class="unlocked downsw" data-pdf="sw" onclick="downloadPDF(event)">
@@ -60,6 +61,7 @@
                     </div>
                 </div>
                 <div id="level2" class="lvli swiper-slide">
+                    <div class="img-loader"><div class="loader"></div></div>
                     <h3>Reading comprehension 👍</h3>
                     <p>Short stories to practice reading and understanding simple text</p>
                     <div class="unlocked downrc" data-pdf="rc" onclick="downloadPDF(event)">
@@ -76,7 +78,30 @@
                     </div>
                 </div>
                 <div id="level3" class="lvli swiper-slide">
+                    <div class="img-loader"><div class="loader"></div></div>
                     <h3>Other 💪</h3>
+        
+    <script>
+    // Custom loader logic for background images
+    function preloadBgImage(cardId, imgUrl) {
+        const card = document.getElementById(cardId);
+        const loader = card.querySelector('.img-loader');
+        const img = new window.Image();
+        img.onload = function() {
+            loader.style.display = 'none';
+            card.style.backgroundImage = `url('${imgUrl}')`;
+        };
+        img.onerror = function() {
+            loader.innerHTML = '<span style="color:red">Image failed</span>';
+        };
+        img.src = imgUrl;
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+        preloadBgImage('level1', 'img/sightw.png');
+        preloadBgImage('level2', 'img/readingc.png');
+        preloadBgImage('level3', 'img/other.png');
+    });
+    </script>
                     <p>Fun worksheets for extra practice with various skills</p>
                     <div class="locked downow">
                         Download
@@ -157,18 +182,48 @@
         </script>
         <script>
         $(document).ready(function(){
+            let loaderStart = Date.now();
             setTimeout(() => {
                 $('.amoment').addClass('animate__animated');
                 $('.amoment').addClass('animate__fadeOut');
                 $('.logo_splash').addClass('animate__animated');
                 $('.logo_splash').addClass('animate__fadeOut');
-                setTimeout(() => {
+                const minLoaderTime = 1300;
+                const hideLoader = () => {
                     $('body').css('overflow','visible');
-                    $('.loading-container').css('display','none');
-                    $('.signin').css('display','table');
-                    $('.white-cont').addClass('animate__animated');
-                    $('.white-cont').addClass('animate__fadeInUp');
-                }, 500);
+                    $('.loading-container').css({'transition':'opacity 0.3s','opacity':0});
+                    setTimeout(() => {
+                        $('.loading-container').css('display','none');
+                        $('.signin').css('display','table');
+                        $('.white-cont').addClass('animate__animated');
+                        $('.white-cont').addClass('animate__fadeInUp');
+                        // Swiper initialization moved here
+                        const swiper = new Swiper('.swiper-container', {
+                            slidesPerView: 1.2,
+                            spaceBetween: 16,
+                            loop: false,
+                            initialSlide: 0,
+                            speed: 700,
+                            effect: 'slide',
+                            observer: true,
+                            observeParents: true,
+                            centeredSlides: false,
+                            breakpoints: {
+                                1000: {
+                                    slidesPerView: 2.2,
+                                    spaceBetween: 24,
+                                    autoHeight: false,
+                                }
+                            }
+                        });
+                    }, 300);
+                };
+                const elapsed = Date.now() - loaderStart;
+                if (elapsed < minLoaderTime) {
+                    setTimeout(hideLoader, minLoaderTime - elapsed);
+                } else {
+                    hideLoader();
+                }
             }, 4000);
         });
         </script>
@@ -176,40 +231,5 @@
         <script src="js/removeanimate.js"></script>
         <script src="js/swiper.min.js"></script>
         <script src="js/redirect-main.js"></script>
-        <script>
-            let loopCount = 0;
-            const swiper = new Swiper('.swiper-container', {
-            slidesPerView: 1.2,
-            spaceBetween: 5,
-            loop: true,
-            initialSlide: 2,
-            speed: 1000,
-            effect: 'slide',
-            loopAdditionalSlides: 3,
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
-            },
-            on: {
-                slideChangeTransitionEnd: function () {
-                loopCount++;
-                if (loopCount >= 4) {
-                    this.autoplay.stop();
-                    this.loopDestroy?.();
-                }
-                }
-            },
-            observer: true,
-            observeParents: true,
-            breakpoints: {
-                1000: {
-                slidesPerView: 2.2,
-                spaceBetween: 15,
-                autoHeight: false,
-                }
-            }
-            });
-            swiper.init();
-        </script>
 </body>
 </html>

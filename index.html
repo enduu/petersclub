@@ -69,6 +69,24 @@
     <script src="js/jquery-1.8.3.min.js"></script>
     <script src="js/loading.js"></script>
     <script>
+        // Loader timing logic for index page
+        let loaderStart = Date.now();
+        window.addEventListener('DOMContentLoaded', function() {
+            const minLoaderTime = 1500;
+            const loader = document.querySelector('.loading-container');
+            const showMain = () => {
+                loader.style.transition = 'opacity 0.3s';
+                loader.style.opacity = 0;
+                setTimeout(() => { loader.style.display = 'none'; }, 300);
+                document.querySelector('.signin').style.display = 'block';
+            };
+            const elapsed = Date.now() - loaderStart;
+            if (elapsed < minLoaderTime) {
+                setTimeout(showMain, minLoaderTime - elapsed);
+            } else {
+                showMain();
+            }
+        });
         const allowedUsers = [
             "avery", "abby", "claire", "candy", "riley", "eleanor", "babe", "amy", "carina", "chenchen", "nancy", "dora", "emily", "frankie", "chris", "andy", "leo", "jerry", "eric", "jason"
         ];
