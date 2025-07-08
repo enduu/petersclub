@@ -38,8 +38,8 @@
             let slide = document.createElement('div');
             slide.id = 'c' + i;
             slide.className = 'swiper-slide';
-            // Use two spaces after ss and one after bs, as per your file structure
-            let imgPath = `imgs/rc/${isSmallScreen ? 'ss  ' : 'bs '}/rc  (${i}).jpg`;
+            // Use one space after ss and bs, as per your updated file structure
+            let imgPath = `imgs/rc/${isSmallScreen ? 'ss' : 'bs'}/rc (${i}).jpg`;
             slide.innerHTML = `
                 <div class="img-loader"><div class="loader"></div></div>
                 <img src="${imgPath}" class="slideimg" style="width:100%;height:100%;object-fit:contain;" />
