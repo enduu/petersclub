@@ -38,7 +38,9 @@
             let slide = document.createElement('div');
             slide.id = 'c' + i;
             slide.className = 'swiper-slide';
-            let imgPath = `imgs/rc/${isSmallScreen ? 'ss ' : 'bs '}/rc  (${i}).jpg`;
+            let imgPath = `imgs/rc/${isSmallScreen ? 'ss' : 'bs'}/rc  (${i}).jpg`;
+            // Remove any accidental space after folder name
+            imgPath = imgPath.replace(/\/ss\s\//, '/ss/').replace(/\/bs\s\//, '/bs/');
             slide.innerHTML = `
                 <div class="img-loader"><div class="loader"></div></div>
                 <img src="${imgPath}" class="slideimg" style="width:100%;height:100%;object-fit:contain;" />
