@@ -90,6 +90,7 @@ p {
     height: 100vh;
 }
 
+
 .full-white-cont {
     position: absolute;
     background-color: #fff;
@@ -102,6 +103,11 @@ p {
 .full-white-cont.recover,
 .full-white-cont.signin {
     display: none;
+}
+
+/* Only apply flex when visible */
+.signin-flex {
+    display: flex !important;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -635,11 +641,14 @@ h3.helptxt {
   80%,100%{transform: perspective(80px) rotate3d(-1,1,0,-360deg)}
 }
 
+
 .conttext, .contform{
     display: flex;
     align-items: center;
     flex-direction: column;
 }
+
+
 
 @media (min-width: 1000px) {
   /* Your styles for large screens go here */
@@ -648,9 +657,8 @@ h3.helptxt {
         align-items: center;
         flex-direction: row;
     }
-    .full-white-cont.signin{
-        display: flex;
-        flex-direction: row;
+    .signin-flex {
+        flex-direction: row !important;
         align-items: center;
         height: 100vh;
     }

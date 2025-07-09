@@ -1,3 +1,28 @@
+@media (min-width: 1000px) {
+  .plays:hover,
+  .lvli h3,
+  .lvli p,
+  a, a:visited, a:active, a:focus,
+  button,
+  [role="button"],
+  .swiper-no-swiping,
+  .unlocked,
+  .gomenu,
+  .module,
+  .bplus,
+  .bplus2,
+  .clickable,
+  .pointer,
+  div[onclick],
+  span[onclick],
+  div[data-click],
+  span[data-click] {
+    cursor: pointer;
+  }
+  .download-btn, button.download-btn, .swiper-no-swiping.download-btn, button.swiper-no-swiping {
+    cursor: pointer;
+  }
+}
 
 /* Download button: use ONLY the .unlocked style, no bevel, no shadow, no extra padding, no fallback color, no font override */
 .download-btn, button.download-btn, .swiper-no-swiping.download-btn, button.swiper-no-swiping {
@@ -16,7 +41,6 @@
   user-select: none;
   border: none;
   display: block;
-  cursor: pointer;
   outline: none;
   transition: background 0.2s;
   width: 30%;
@@ -420,6 +444,7 @@
 /* Remove default browser styling for download buttons */
 
 
+/* Download button: use ONLY the .unlocked style, no bevel, no shadow, no extra padding, no fallback color, no font override */
 .download-btn, button.download-btn, .swiper-no-swiping.download-btn, button.swiper-no-swiping {
   appearance: none;
   -webkit-appearance: none;
@@ -435,13 +460,15 @@
   text-align: center;
   user-select: none;
   border: none;
-  margin: 0 auto;
-  display: inline-block;
+  display: block;
   cursor: pointer;
   outline: none;
   transition: background 0.2s;
   width: 30%;
-  position: relative;
+  position: absolute;
+  bottom: 4vh;
+  left: 20px;
+  margin: 0;
 }
 .download-btn:active, button.download-btn:active {
   background: linear-gradient(45deg, rgb(94, 0, 207) 0%, rgb(197, 14, 210) 100%);

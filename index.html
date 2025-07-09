@@ -80,11 +80,10 @@
                 loader.style.opacity = 0;
                 setTimeout(() => {
                     loader.style.display = 'none';
-                    // Show and animate signin after loader fades out
-                    signin.style.display = 'block';
-                    setTimeout(() => {
-                        signin.classList.add('animate__animated', 'animate__fadeInUp');
-                    }, 500);
+                    // Show and animate signin immediately after loader fades out
+                    signin.classList.add('signin-flex');
+                    signin.style.display = 'flex';
+                    signin.classList.add('animate__animated', 'animate__fadeInUp');
                 }, 300);
             };
             const elapsed = Date.now() - loaderStart;
